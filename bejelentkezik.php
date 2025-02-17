@@ -14,9 +14,6 @@ if (count($_POST) > 0) {
    
     $jelszo = $_POST['jelszo'];
     $email = $_POST['email'];
-  
-    
-
 
     
     $kapcsolat = kapcsolodas('mysql:host=localhost;dbname=vizsga');
