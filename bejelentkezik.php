@@ -11,8 +11,8 @@ session_start();
 
 $hibak = [];
 if (count($_POST) > 0) {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $firstname = $_POST['vezeteknev'];
+    $lastname = $_POST['keresztnev'];
     $jelszo = $_POST['jelszo'];
     $email = $_POST['email'];
     $captcha=$_POST["captcha"];
@@ -38,7 +38,7 @@ if (count($_POST) > 0) {
 
 
 
-    //$kapcsolat = kapcsolodas('sqlite:./todo.sqlite');
+    
     $kapcsolat = kapcsolodas('mysql:host=localhost;dbname=vizsga');
 
     $felhasznalo = ellenoriz($kapcsolat, $firstname,$lastname, $jelszo,$email);

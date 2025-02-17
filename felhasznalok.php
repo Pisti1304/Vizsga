@@ -9,8 +9,9 @@ function regisztral($kapcsolat, $firstname,$lastname, $jelszo,$email) {
         [
             ':vezeteknev'   => $firstname,
             ':keresztnev'   => $lastname,
-            ':jelszo'           => password_hash($jelszo, PASSWORD_DEFAULT),
             ':email'   => $email,
+            ':jelszo'           => password_hash($jelszo, PASSWORD_DEFAULT),
+            
         ]
     );
     return $db === 1;
