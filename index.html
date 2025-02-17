@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalGym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p id="logofelirat">LocalGym</p></a>
+            <ul>
+                <a href="rolunk.html"><li class="animacio">Rólunk</li></a>  
+                <a href="kapcsolat.html"><li class="animacio">Kapcsolat</li></a>  
+                <a href="webshop.html"><li class="animacio">Webshop</li></a>        
+            </ul>
+        </nav>
+    </header>
+
+    <div id="foszoveg">Üdvözlünk a LocalGym hivatalos oldalán!</div>
+
+    <main id="tartalom">
+        <div id="kontent1">
+            <h1>
+                Miért válassz minket? <br>
+            </h1>
+            <p>
+                Mert nálunk nem csak egy edzésélményt kapsz, hanem egy közösséget, ahol mindenki támogatja
+                egymást. Modern eszközökkel és személyre szabott edzéstervekkel segítünk elérni a céljaidat,
+                bárhol is tartasz most. Legyen szó fogyásról, izomtömeg növelésről, vagy általános erőnlét
+                fejlesztésről, mi a megfelelő irányt mutatjuk. Edzőink tapasztaltak és mindig ott vannak, hogy
+                motiváljanak, hogy a legjobb formádat hozd. Ráadásul rugalmas nyitvatartással, kényelmes
+                környezetben várunk. Válaszd a fejlődést, válaszd a mi konditermünket – itt valódi változást
+                érhetsz el!
+            </p>
+        </div>  
+        <div id="kontent2">
+            <form id="form1" method="POST" action="index.html">
+                <h2 id="h2">Regisztráció</h2>
+                <label for="firstname"></label>
+                <input type="text" id="firstname" class="input" placeholder="Vezetéknév" autocomplete="off" name="vezeteknev" required>
+                    
+                <label for="lastname"></label>
+                <input type="text" id="lastname" class="input" placeholder="Keresztnév" autocomplete="off" name="keresztnev" required>
+                    
+                <label for="email"></label>
+                <input type="email" id="email" class="input" placeholder="Email" autocomplete="off" name="email" required>
+                                
+                <label for="password"></label>
+                <p class="uzenet"><span id="strength1"></span></p>
+                <input type="password" id="password" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
+                    
+                <label for="password2"></label>
+                <p class="uzenet"><span id="strength2"></span></p> 
+                <input type="password" id="password2" class="input" placeholder="Jelszó megerősítése" autocomplete="off" required>
+                    
+                <button action="regisztal.php" id="gomb" type="submit" >Regisztráció</button>
+                <p>Van már fiókod? <a href="#" class="beje-reg" id="bejelentkezes">Jelentkezz be!</a></p>
+            </form>
+        </div>
+
+        <div id="kontent3" class="hidden">
+            <form action="index.php" method="post" id="form2">
+                <h2>Bejelentkezés</h2>
+                <label for="email"></label>
+                <input type="text" id="email2" class="input" placeholder="Email" autocomplete="off" name="email" required>
+
+                <label for="password"></label>
+                <input type="text" id="jelszo2" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
+
+                <button id="gomb" type="submit">Bejelentkezés</button>
+                <p>Nincs még fiókod? <a href="#" class="beje-reg" id="regisztracio">Regisztrálj!</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer_">
+        <div>
+            Támogatóink
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
+
+
+<!-- 
+<div id="div1" class="div hidden">
+    <div class="kontent">
+        <span id="bezarGomb" class="close">&times;</span>
+        <h2 id="divh2">Regisztráció</h2>
+        <form method="POST" action="index.php">
+            <label for="firstname"></label>
+            <input type="text" id="firstname" class="input" placeholder="Vezetéknév" autocomplete="off" name="vezeteknev" required>
+
+            <label for="lastname"></label>
+            <input type="text" id="lastname" class="input" placeholder="Keresztnév" autocomplete="off" name="keresztnev" required>
+
+            <label for="email"></label>
+            <input type="email" id="email" class="input" placeholder="Email" autocomplete="off" name="email" required>
+            
+            <label for="password"></label>
+            <p class="uzenet"><span id="strength1"></span></p>
+            <input type="password" id="password" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
+
+            <label for="password2"></label>
+            <!-- <p class="uzenet"><span id="strength2"></span></p> 
+            <input type="password" id="password2" class="input" placeholder="Jelszó mégegyszer" autocomplete="off" required>
+
+            <button class="gomb" type="submit">Regisztráció</button>
+            <p>Van már fiókod? <a href="#" id="bejelink">Jelentkezz be!</a></p>
+        </form>
+    </div>
+</div> -->
