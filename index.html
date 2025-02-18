@@ -11,10 +11,16 @@
 <body>
     <header>
         <nav>
-            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p id="logofelirat">LocalGym</p></a>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank">
+                <p id="logofelirat">LocalGym</p>
+            </a>
             <ul>
-                <a href="kapcsolat.html"><li class="animacio">Kapcsolat</li></a>  
-                <a href="webshop.html"><li class="animacio">Webshop</li></a>        
+                <a href="kapcsolat.html">
+                    <li class="animacio">Kapcsolat</li>
+                </a>
+                <a href="webshop.html">
+                    <li class="animacio">Webshop</li>
+                </a>
             </ul>
         </nav>
     </header>
@@ -35,28 +41,33 @@
                 környezetben várunk. Válaszd a fejlődést, válaszd a mi konditermünket – itt valódi változást
                 érhetsz el!
             </p>
-        </div>  
+        </div>
         <div id="kontent2">
             <form id="form1" method="POST" action="regisztral.php">
                 <h2 id="h2">Regisztráció</h2>
                 <label for="firstname"></label>
-                <input type="text" id="firstname" class="input" placeholder="Vezetéknév" autocomplete="off" name="vezeteknev" required>
-                    
+                <input type="text" id="firstname" class="input" placeholder="Vezetéknév" autocomplete="off"
+                    name="vezeteknev" required>
+
                 <label for="lastname"></label>
-                <input type="text" id="lastname" class="input" placeholder="Keresztnév" autocomplete="off" name="keresztnev" required>
-                    
+                <input type="text" id="lastname" class="input" placeholder="Keresztnév" autocomplete="off"
+                    name="keresztnev" required>
+
                 <label for="email"></label>
-                <input type="email" id="email" class="input" placeholder="Email" autocomplete="off" name="email" required>
-                                
+                <input type="email" id="email" class="input" placeholder="Email" autocomplete="off" name="email"
+                    required>
+
                 <label for="password"></label>
                 <p class="uzenet"><span id="strength1"></span></p>
-                <input type="password" id="password" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
-                    
+                <input type="password" id="password" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo"
+                    required>
+
                 <label for="password2"></label>
-                <p class="uzenet"><span id="strength2"></span></p> 
-                <input type="password" id="password2" class="input" placeholder="Jelszó megerősítése" autocomplete="off" required>
-                    
-                <button action="regisztal.php" id="gomb" type="submit" >Regisztráció</button>
+                <p class="uzenet"><span id="strength2"></span></p>
+                <input type="password" id="password2" class="input" placeholder="Jelszó megerősítése" autocomplete="off"
+                    required>
+
+                <button action="regisztal.php" id="gomb" type="submit">Regisztráció</button>
                 <p>Van már fiókod? <a href="#" class="beje-reg" id="bejelentkezes">Jelentkezz be!</a></p>
             </form>
         </div>
@@ -65,10 +76,12 @@
             <form action="bejelentkezik.php" method="post" id="form2">
                 <h2>Bejelentkezés</h2>
                 <label for="email"></label>
-                <input type="text" id="email2" class="input" placeholder="Email" autocomplete="off" name="email" required>
+                <input type="text" id="email2" class="input" placeholder="Email" autocomplete="off" name="email"
+                    required>
 
                 <label for="password"></label>
-                <input type="text" id="jelszo2" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
+                <input type="text" id="jelszo2" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo"
+                    required>
 
                 <button id="gomb" type="submit">Bejelentkezés</button>
                 <p>Nincs még fiókod? <a href="#" class="beje-reg" id="regisztracio">Regisztrálj!</a></p>
@@ -77,8 +90,23 @@
     </main>
 
     <footer id="footer_">
-        <div>
-            Támogatóink
+        <div id="footer_szekcio1">
+            <div id="footer_szoveg1">
+                Támogatóink
+            </div>
+            <div>
+                <a href="gymshark.com" target="_blank"><img src="logo1.png" alt="szponzor" class="kep"></a>
+                <a href="luxoya.com" target="_blank"><img src="logo2.png" alt="szponzor" class="kep"></a>
+            </div>
+        </div>
+
+        <div id="footer_szekcio2">
+            <div id="footer_szoveg2">
+                Megtalálhatóság 
+            </div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.2874534665207!2d-74.57646691280635!3d39.27826279250777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0eab397344f0b%3A0xd47db13e282781c8!2sLocal%20Gym%20and%20Fitness!5e1!3m2!1shu!2shu!4v1739874529573!5m2!1shu!2shu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </footer>
 
@@ -86,33 +114,3 @@
 </body>
 
 </html>
-
-
-<!-- 
-<div id="div1" class="div hidden">
-    <div class="kontent">
-        <span id="bezarGomb" class="close">&times;</span>
-        <h2 id="divh2">Regisztráció</h2>
-        <form method="POST" action="index.php">
-            <label for="firstname"></label>
-            <input type="text" id="firstname" class="input" placeholder="Vezetéknév" autocomplete="off" name="vezeteknev" required>
-
-            <label for="lastname"></label>
-            <input type="text" id="lastname" class="input" placeholder="Keresztnév" autocomplete="off" name="keresztnev" required>
-
-            <label for="email"></label>
-            <input type="email" id="email" class="input" placeholder="Email" autocomplete="off" name="email" required>
-            
-            <label for="password"></label>
-            <p class="uzenet"><span id="strength1"></span></p>
-            <input type="password" id="password" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
-
-            <label for="password2"></label>
-            <!-- <p class="uzenet"><span id="strength2"></span></p> 
-            <input type="password" id="password2" class="input" placeholder="Jelszó mégegyszer" autocomplete="off" required>
-
-            <button class="gomb" type="submit">Regisztráció</button>
-            <p>Van már fiókod? <a href="#" id="bejelink">Jelentkezz be!</a></p>
-        </form>
-    </div>
-</div> -->

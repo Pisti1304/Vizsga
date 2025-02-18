@@ -127,5 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
         kontent2.classList.remove('start-animation');
         void kontent2.offsetWidth;
         kontent2.classList.add('start-animation');
-    };
+    }; 
 })
+
+
+
+
+

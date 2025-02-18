@@ -1,5 +1,6 @@
 body, html {
-    height: 100vh;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url(palms.jpg);
@@ -8,15 +9,7 @@ body, html {
     background-size: cover;
 }
 
-p {
-    text-align: center;
-    color: white;
-    display: inline;
-}
-
-a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+a{
     text-decoration: none;
 }
 
@@ -310,4 +303,42 @@ nav>ul>a>li:hover {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+
+footer{
+    position: absolute;
+    height: 500px;
+    width: 100vw;
+    background-color: rgb(59, 227, 13);
+    backdrop-filter: blur(5px);
+}
+#footer_szekcio1{
+    position: absolute;
+    height: 250px;
+    width: 350px;
+    margin: 30px;
+    text-align: center;
+    left: 150px;
+}
+#footer_szoveg1{
+    padding: 30px;
+    font-size: 20px;
+}
+#footer_szekcio2{
+    position: absolute;
+    margin: 30px;
+    right: 0;
+    text-align: center;
+
+}
+#footer_szoveg2{
+    padding: 30px;
+    font-size: 20px;
+}
+.kep{
+    height: 100px;
+}
+.kep2{
+    height: 200px;
 }
