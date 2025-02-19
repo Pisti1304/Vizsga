@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(palms.jpg);
+    background-image: url(fenykepek/palms.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -305,40 +305,31 @@ nav>ul>a>li:hover {
     }
 }
 
-
 footer{
     position: absolute;
-    height: 500px;
+    height: 400px;
     width: 100vw;
     background-color: rgb(59, 227, 13);
     backdrop-filter: blur(5px);
+    display: flex;
 }
-#footer_szekcio1{
-    position: absolute;
-    height: 250px;
-    width: 350px;
-    margin: 30px;
-    text-align: center;
-    left: 150px;
-}
-#footer_szoveg1{
-    padding: 30px;
-    font-size: 20px;
-}
-#footer_szekcio2{
-    position: absolute;
-    margin: 30px;
-    right: 0;
-    text-align: center;
 
+#baloldal{
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    left: 0;
+    text-align: center; 
 }
-#footer_szoveg2{
-    padding: 30px;
-    font-size: 20px;
-}
+
 .kep{
     height: 100px;
 }
-.kep2{
-    height: 200px;
+
+#jobboldal{
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    text-align: center; 
+    right: 0;
 }
