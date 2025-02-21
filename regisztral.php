@@ -14,9 +14,6 @@ if (count($_POST) > 0) {
 
     $kapcsolat = kapcsolodas('mysql:host=localhost;dbname=vizsga');
    
-
-   
-
     if (count($hibak) === 0) {
         regisztral($kapcsolat, $firstname,$lastname,$email, $jelszo);
         header('Location: index.html');

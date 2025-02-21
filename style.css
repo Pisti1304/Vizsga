@@ -333,3 +333,11 @@ footer{
     text-align: center; 
     right: 0;
 }
+
+
+#szoveg{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    animation: animacio1 2s forwards;
+}

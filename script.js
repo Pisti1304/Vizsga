@@ -128,6 +128,17 @@ document.addEventListener("DOMContentLoaded", () => {
         void kontent2.offsetWidth;
         kontent2.classList.add('start-animation');
     }; 
+
+
+    document.getElementById("regisztracio").onclick = function () {      
+        var szoveg = document.getElementById("szoveg");
+            kontent2.style.display = "none";
+            szoveg.style.display = "block";
+
+
+    
+
+    };
 })
 
 
