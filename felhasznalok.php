@@ -2,7 +2,7 @@
 
 
 //insertálás
-function regisztral($kapcsolat, $firstname,$lastname, $jelszo,$email) {
+function regisztral($kapcsolat, $firstname,$lastname, $email,$jelszo) {
     $db = vegrehajtas($kapcsolat,
         'insert into felhasznalok (vezeteknev,keresztnev, email ,jelszo)
             values (:vezeteknev,:keresztnev,:email, :jelszo)',
@@ -10,10 +10,11 @@ function regisztral($kapcsolat, $firstname,$lastname, $jelszo,$email) {
             ':vezeteknev'   => $firstname,
             ':keresztnev'   => $lastname,
             ':email'   => $email,
-            ':jelszo'           => password_hash($jelszo, PASSWORD_DEFAULT),
+            ':jelszo'  => password_hash($jelszo, PASSWORD_DEFAULT),
             
         ]
     );
     return $db === 1;
 }
+
 ?>
