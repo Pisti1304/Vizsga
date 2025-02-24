@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webshop.css">
+    <title>Webshop</title>
+  
+</head>
+<body>
+
+    <div class="logo">
+        <img src="476571384_637771372067943_5280803355974539367_n.png" alt="Logó">
+    </div>
+
+    <button class="kosar-gomb" onclick="megnyitKosarat()">🛒 Kosár (<span id="kosar-szamlalo">0</span>)</button>
+
+    <div id="termekek"></div>
+
+    <script>
+        const termekLista = [
+            {
+                nev: "100% Creatine Monohydrate",
+                ar: 4990,
+                kep: "477098228_1150076360183006_8983970519507663722_n.png",
+                leiras: "Egy L kiszerelésű (500g) Local Gym márkájú ízesítetlen doboz kreatin."
+            },
+            {
+                nev: "True Whey Protein (Chocolate)",
+                ar: 11990,
+                kep: "480027995_3544940609141354_8544235277471835065_n.png",
+                leiras: "1000g saját márkás Local Gym fehérjepor (csokoládés)."
+            },
+            {
+                nev: "True Whey Protein (Strawberry)",
+                ar: 9990,
+                kep: "476345471_994074315906456_1950244909143391330_n.png",
+                leiras: "1000g saját márkás Local Gym fehérjepor (epres)."
+            },
+            {
+                nev: "True Whey Protein (White Chocolate)",
+                ar: 12990,
+                kep: "476403501_998212432217910_2449646308900856191_n.png",
+                leiras: "1000g saját márkás Local Gym fehérjepor (fehér csokoládés)."
+            }
+        ];
+
+        function megjelenitTermekek() {
+            const termekekTarolo = document.getElementById("termekek");
+            termekekTarolo.innerHTML = "";
+            termekLista.forEach((termek) => {
+                const div = document.createElement("div");
+                div.classList.add("termek");
+                div.innerHTML = `
+                        <a href="termek.html?nev=${encodeURIComponent(termek.nev)}&ar=${termek.ar}&kep=${encodeURIComponent(termek.kep)}&leiras=${encodeURIComponent(termek.leiras)}">
+                            <img src="${termek.kep}" alt="${termek.nev}">
+                        </a>
+                        <div class="termek-reszletek">
+                            <h2>${termek.nev}</h2>
+                            <p class="ar">${termek.ar} Ft</p>
+                        </div>
+                        <button class="gomb" onclick="hozzaadKosarhoz('${termek.nev}', ${termek.ar})">Kosárba</button>
+                    `;
+                termekekTarolo.appendChild(div);
+            });
+        }
+
+        function hozzaadKosarhoz(nev, ar) {
+            let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
+            kosar.push({ nev, ar });
+            localStorage.setItem("kosar", JSON.stringify(kosar));
+            frissitKosarSzamlalo();
+        }
+
+        function frissitKosarSzamlalo() {
+            let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
+            document.getElementById("kosar-szamlalo").innerText = kosar.length;
+        }
+
+        function megnyitKosarat() {
+            window.location.href = "cart.html";
+        }
+
+        megjelenitTermekek();
+        frissitKosarSzamlalo();
+    </script>
+
+</body>
+</html>

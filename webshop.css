@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .logo img {
+        max-width: 200px;
+    }
+
+.termek {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+    .termek:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .termek img {
+        max-width: 100px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+.termek-reszletek {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.ar {
+    font-weight: bold;
+}
+
+.gomb {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .gomb:hover {
+        background-color: #218838;
+    }
+
+.kosar-gomb {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kosar.css">
+    <title>Kosár</title>
+    
+</head>
+<body>
+
+    <div class="logo">
+        <img src="476571384_637771372067943_5280803355974539367_n.png" alt="Logó">
+    </div>
+
+    <div id="kosar-tartalom"></div>
+
+    <div class="gombok">
+        <button class="gomb" onclick="kosarUritese()">Kosár ürítése</button>
+        <button class="gomb" onclick="visszaBoltba()">Vissza a boltba</button>
+    </div>
+
+    <script>
+        let kosar = JSON.parse(localStorage.getItem("kosar")) || [];
+        const kosarTartalom = document.getElementById("kosar-tartalom");
+
+        function megjelenitKosar() {
+            kosarTartalom.innerHTML = "";
+            if (kosar.length === 0) {
+                kosarTartalom.innerHTML = "<p>A kosár üres.</p>";
+                return;
+            }
+            kosar.forEach((termek, index) => {
+                const div = document.createElement("div");
+                div.classList.add("kosar-termek");
+                div.innerHTML = `
+                        <img src="${termek.kep}" alt="${termek.nev}">
+                        <div class="termek-reszletek">
+                            <h2>${termek.nev}</h2>
+                            <p>${termek.ar} Ft</p>
+                        </div>
+                        <button class="gomb gomb-torles" onclick='eltavolitasKosarbol(${index})'>Eltávolítás</button>
+                    `;
+                kosarTartalom.appendChild(div);
+            });
+        }
+
+        function eltavolitasKosarbol(index) {
+            kosar.splice(index, 1);
+            localStorage.setItem("kosar", JSON.stringify(kosar));
+            megjelenitKosar();
+        }
+
+        function kosarUritese() {
+            localStorage.removeItem("kosar");
+            kosar = [];
+            megjelenitKosar();
+        }
+
+        function visszaBoltba() {
+            window.location.href = "webshop.html";
+        }
+
+        megjelenitKosar();
+    </script>
+
+</body>
+</html>
