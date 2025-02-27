@@ -7,6 +7,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 a{
@@ -342,18 +343,19 @@ footer{
     animation: animacio1 2s forwards;
 }
 #ketlepcsos{
-    border: 1px solid black;
+    border: 1px solid rgb(59, 227, 13);
     width: 400px;
-    margin-left: 400px;
-    margin-top: 50px;
-    height: 330px;
+    margin: auto;
+    height: 500px;
+    text-align: center;
+    
 }
 .fa_ell{
     background-color: orange;
     border: 1px solid orange;
     width: 100px;
     padding: 9px;
-    margin-left: 100px;
+    
 }
 .hatjkod[type=number]{
     width: 290px;
@@ -364,4 +366,13 @@ footer{
 .asd {
     font-weight: bold;
     font-size: 18px;
+    color: rgb(59, 227, 13);
 }
+
+#ketlepcsosz{
+    color: rgb(59, 227, 13);
+}
+#sz{
+    color: white;
+}
+
