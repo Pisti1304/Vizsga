@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /*JELSZÓ ERŐSSÉG MÉRŐ*/
+
     var pass = document.getElementById("password");
     var pass2 = document.getElementById("password2");
     var str = document.getElementById("strength1");
@@ -83,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+
+    /*REGISZTRÁCIÓS ALERTEK*/
+
     var button = document.getElementById("gomb").onclick = function () {
         var pass = document.getElementById('password').value;
         var pass2 = document.getElementById('password2').value;
@@ -123,25 +128,30 @@ document.addEventListener("DOMContentLoaded", () => {
         kontent3.style.display = "none";
         kontent2.style.display = "block";
 
-
         kontent2.classList.remove('start-animation');
         void kontent2.offsetWidth;
         kontent2.classList.add('start-animation');
-    }; 
-
-
-    document.getElementById("regisztracio").onclick = function () {      
-        var szoveg = document.getElementById("szoveg");
-            kontent2.style.display = "none";
-            szoveg.style.display = "block";
-
-
-    
-
     };
-})
- 
 
+
+    /*REGISZTRÁCIÓ UTÁN FELDOBJA A BEJELENTKEZÉS ABLAKOT*/
+
+    document.getElementById("regisztracio").onclick = function () {
+        var szoveg = document.getElementById("szoveg");
+        kontent2.style.display = "none";
+        szoveg.style.display = "block";
+    };
+
+
+    /*WEBSHOP - ÁRVÁLTOZTATÓ*/
+
+
+    function updatePrice() {
+        const price = document.getElementById("preworkout").value;
+        document.getElementById("price").textContent = new Intl.NumberFormat('hu-HU').format(price);
+    }
+
+});
 
 
 

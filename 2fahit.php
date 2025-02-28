@@ -44,13 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div id="ketlepcsos">
-        <h1 id="ketlepcsosz">Kétlépcsős Bejelentkezés</h1>
-        <p id="sz">Gépeld be a 6 jegyű kódot, amit emailben kaptál! <br> 
+        <h1 id="ketlepcso_szoveg1">Kétlépcsős Bejelentkezés</h1>
+        <p id="ketlepcso_szoveg2">Gépeld be a 6 jegyű kódot, amit emailben kaptál! <br> 
         Email címed: <?php echo ($_SESSION['email']); ?></p>
         <form method="post" action="2fahit.php">
-            <label class="asd" for="otp">Üsd be a kétlépcsős kódot:</label><br>
-            <input type="number" name="otp" pattern="\d{6}" placeholder="6 jegyű kód" class="hatjkod" required><br><br>
-            <button type="submit" class="fa_ell">Kód ellenőrzés</button>
+            <label class="ketlepcso_label" for="otp">Üsd be a kétlépcsős kódot:</label><br>
+            <input type="number" name="otp" pattern="\d{6}" placeholder="6 jegyű kód" class="hatjegyukod" required><br><br>
+            <button type="submit" class="ketfaktor_gomb">Kód ellenőrzés</button>
         </form>
     </div>
 </body>
