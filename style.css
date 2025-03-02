@@ -152,9 +152,8 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background-image: url(csongi.png);
-    /*backdrop-filter: blur(30px);
-    border: 2px solid rgb(59, 227, 13);*/
+    backdrop-filter: blur(30px);
+    border: 2px solid rgb(59, 227, 13);
 }
 
 
@@ -167,7 +166,7 @@ a {
     margin-bottom: 20px;
     background: transparent;
     font-size: 15px;
-    color: white;
+    color: #ffffff;
     border: none;
     border-bottom: 2px solid white;
     animation: animacio1 2.5s forwards;
