@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Gym - Regisztráció</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p class="logofelirat">LocalGym</p></a>
+            <ul>
+                <a href="rolunk.html"><li class="animacio">Rólunk</li></a>
+                <a href="kapcsolat.html"><li class="animacio">Kapcsolat</li></a>
+                <a href="webshop.html"><li class="animacio">Webshop</li></a>
+                <a href="index.html"><li class="animacio">Főoldal</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="kontent3" class="hidden">
+            <form action="bejelentkezik.php" method="post" id="form2">
+                <h2>Bejelentkezés</h2>
+                <label for="email"></label>
+                <input type="text" id="email2" class="input" placeholder="Email" autocomplete="off" name="email" required>
+
+                <label for="password"></label>
+                <input type="text" id="jelszo2" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
+
+                <button id="gomb" type="submit">Bejelentkezés</button>
+                <p>Nincs még fiókod? <a href="regisztracio.html" class="beje-reg" id="regisztracio">Regisztrálj!</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

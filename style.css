@@ -144,18 +144,19 @@ a {
     position: absolute;
     display: flex;
     height: 500px;
-    width: 350px;
-    padding: 20px;
-    margin: 20px 20px 20px;
-    right: 100px;
+    width: 400px;
+    padding: 15px;
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
     text-align: center;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     backdrop-filter: blur(30px);
     border: 2px solid rgb(59, 227, 13);
-}
-
+} 
 
 #kontent2 input {
     display: block;
@@ -222,20 +223,17 @@ a {
     display: flex;
     height: 300px;
     width: 400px;
-    padding: 25px;
-    margin: 40px 40px 20px auto;
-    right: 0;
+    padding: 15px;
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     backdrop-filter: blur(30px);
     border: 2px solid rgb(59, 227, 13);
-}
-
-#kontent3 {
-    display: none;
-}
+} 
 
 #kontent3 input {
     display: block;
