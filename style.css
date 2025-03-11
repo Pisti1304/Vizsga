@@ -317,11 +317,9 @@ a {
 
 footer {
     position: absolute;
-    display: flex;
     height: 300px;
     width: 100vw;
     background-color: rgb(59, 227, 13);
-    backdrop-filter: blur(5px);
 }
 
 #kontent5{
@@ -329,18 +327,67 @@ footer {
     top: 90px;
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 50px;
+}
+
+#kontent5 div{
+    display: flex;
+    gap: 80px;
 }
 
 #kontent5 p{
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    color: white;
+    color: black;
     animation: animacio1 2s forwards;
 }
 
-.kep1 {
-    height: 100px;
+#kontent5 img{
+    height: 100px; 
 }
+
+#kontent6{
+    position: absolute;
+    height: 80px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    font-size: 1.2rem;
+    color: black;
+}
+
+#kontent6 ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+#kontent6 li{
+    color: black;
+}
+
+#kontent6 li:hover{
+    color: white;
+}
+
+#kontent7{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
+
+.footer_logo{
+    height: 50px;
+    margin: 25px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.footer_logo:hover{
+    transform: scale(1.2);
+}
+
 
 /*KÉTLÉPCSŐS BEJELENTKEZÉS KÓDJA*/
 
