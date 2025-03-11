@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -108,7 +109,7 @@ a {
     width: 100vw;
 }
 
-#kontent1 {
+#kontent1_bal {
     position: absolute;
     height: 350px;
     width: 500px;
@@ -122,7 +123,7 @@ a {
     text-align: justify;
 }
 
-#kontent1 h1 {
+#kontent1_bal h1 {
     font-size: 3rem;
     line-height: 3rem;
     text-align: center;
@@ -131,23 +132,49 @@ a {
     animation: animacio1 2.5s forwards !important;
 }
 
-#kontent1 p {
+#kontent1_bal p {
     color: #f3f4f6;
     text-align: justify;
     animation: animacio1 2.5s forwards;
 }
 
+#kontent2_jobb {
+    position: absolute;
+    height: 450px;
+    width: 500px;
+    padding: 1rem;
+    margin: 40px 70px 20px;
+    right: 0;
+    text-align: center;
+    border-radius: 30px;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgb(59, 227, 13);
+}
 
-/*JOBBOLDALI DIV*/
+#kontent2_jobb h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: rgb(59, 227, 13);
+    font-weight: 600;
+    animation: animacio1 2.5s forwards !important;
+}
 
-#kontent2 {
+#kontent2_jobb iframe {
+    animation: animacio1 2.5s forwards;
+}
+
+
+/*REGISZTRÁCIÓS OLDAL*/
+
+#kontent3 {
     position: absolute;
     display: flex;
     height: 500px;
     width: 400px;
     padding: 15px;
-    top: 50%;  
-    left: 50%;  
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 30px;
     text-align: center;
@@ -156,9 +183,9 @@ a {
     border-radius: 20px;
     backdrop-filter: blur(30px);
     border: 2px solid rgb(59, 227, 13);
-} 
+}
 
-#kontent2 input {
+#kontent3 input {
     display: block;
     margin: auto;
     height: 35px;
@@ -173,23 +200,23 @@ a {
     animation: animacio1 2.5s forwards;
 }
 
-#kontent2 input:focus {
+#kontent3 input:focus {
     outline: none;
     border-bottom: 2px solid rgb(59, 227, 13);
 }
 
-#kontent2 input::placeholder {
+#kontent3 input::placeholder {
     font-size: 15px;
     color: white;
 }
 
-#kontent2 form {
+#kontent3 form {
     position: absolute;
     color: white;
     animation: animacio1 2.5s forwards;
 }
 
-#kontent2 button {
+#kontent3 button {
     height: 40px;
     width: 200px;
     border-radius: 20px;
@@ -200,7 +227,7 @@ a {
     display: block;
 }
 
-#kontent2 button:hover {
+#kontent3 button:hover {
     cursor: pointer;
     background-color: rgb(59, 227, 13);
     transition: transform 0.5s ease;
@@ -208,24 +235,24 @@ a {
 }
 
 
-/*BEJELENTKEZÉS*/
+/*BEJELENTKEZÉS OLDAL*/
 
 .beje-reg {
     color: rgb(59, 227, 13);
 }
 
-.beje-reg:hover { 
+.beje-reg:hover {
     color: white;
 }
 
-#kontent3 {
+#kontent4 {
     position: absolute;
     display: flex;
     height: 300px;
     width: 400px;
     padding: 15px;
-    top: 50%;  
-    left: 50%;  
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
@@ -233,9 +260,9 @@ a {
     border-radius: 20px;
     backdrop-filter: blur(30px);
     border: 2px solid rgb(59, 227, 13);
-} 
+}
 
-#kontent3 input {
+#kontent4 input {
     display: block;
     margin: auto;
     height: 30px;
@@ -250,23 +277,23 @@ a {
     animation: animacio1 2.5s forwards;
 }
 
-#kontent3 input::placeholder {
+#kontent4 input::placeholder {
     font-size: 15px;
     color: white;
 }
 
-#kontent3 input:focus {
+#kontent4 input:focus {
     outline: none;
     border-bottom: 2px solid rgb(59, 227, 13);
 }
 
-#kontent3 form {
+#kontent4 form {
     position: absolute;
     color: white;
     animation: animacio1 2.5s forwards;
 }
 
-#kontent3 button {
+#kontent4 button {
     position: relative;
     display: block;
     height: 40px;
@@ -278,7 +305,7 @@ a {
     margin: 10px auto;
 }
 
-#kontent3 button:hover {
+#kontent4 button:hover {
     cursor: pointer;
     background-color: rgb(59, 227, 13);
     transition: transform 0.5s ease;
@@ -290,40 +317,30 @@ a {
 
 footer {
     position: absolute;
-    height: 400px;
+    display: flex;
+    height: 300px;
     width: 100vw;
     background-color: rgb(59, 227, 13);
     backdrop-filter: blur(5px);
-    display: flex;
 }
 
-#baloldal {
+#kontent5{
     position: absolute;
-    height: 300px;
-    width: 500px;
-    left: 0;
-    text-align: center; 
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#kontent5 p{
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    animation: animacio1 2s forwards;
 }
 
 .kep1 {
     height: 100px;
 }
-
-#jobboldal {
-    position: absolute;
-    height: 300px;
-    width: 500px;
-    text-align: center; 
-    right: 0;
-}
-
-#szoveg {
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    animation: animacio1 2s forwards;
-}
-
 
 /*KÉTLÉPCSŐS BEJELENTKEZÉS KÓDJA*/
 
@@ -333,7 +350,7 @@ footer {
     margin: auto;
     height: 500px;
     text-align: center;
-    
+
 }
 
 .ketfaktor_gomb {
@@ -347,7 +364,7 @@ footer {
     width: 290px;
     padding: 10px;
     margin-top: 10px;
-    
+
 }
 
 .ketlepcso_label {
@@ -374,7 +391,8 @@ footer {
     0% {
         opacity: 0;
         transform: translateX(-100%);
-    } 
+    }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -405,7 +423,7 @@ footer {
     justify-content: center;
 }
 
-.ikon {   
+.ikon {
     height: 350px;
     width: 200px;
     text-align: center;
@@ -450,7 +468,7 @@ footer {
 }
 
 .eltunes {
-    display: none;  
+    display: none;
 }
 
 .kep2 {
