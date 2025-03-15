@@ -134,5 +134,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });*/
+
+
+    const menuGomb = document.querySelector('.menu-gomb');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuGomb.addEventListener('click', () => {
+        navMenu.classList.toggle('mobile-menu');
+    });
 });
 

@@ -1,5 +1,4 @@
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,6 +26,46 @@ a {
     color: white;
     background: transparent;
     backdrop-filter: blur(30px);
+}
+ 
+/*Telefonos nézet*/
+
+.menu-gomb{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .menu-gomb{
+        top: 21%;
+        right: 30px;
+        display: block;
+    }
+    .navbar {
+        background: transparent;
+        backdrop-filter: blur(30px);
+    }
+    .logofelirat{
+        top: 30px;
+        left: 30px;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+        background: rgb(59, 227, 13);
+    }
+    .nav-menu li{
+        display: none;
+    }
+    #foszoveg{
+        position: relative;
+        top: 0px;
+    }
+
 }
 
 .navbar ul {

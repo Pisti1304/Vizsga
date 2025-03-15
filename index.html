@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalGym</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <nav class="navbar">
-            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p class="logofelirat">LocalGym</p></a>
-            <ul>
-                <a href="rolunk.html"><li class="animacio">Rólunk</li></a>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p class="logofelirat">LocalGym</p>
+            </a>
+            <ul class="nav-menu"><a href="rolunk.html"><li class="animacio">Rólunk</li></a>
                 <a href="kapcsolat.html"><li class="animacio">Kapcsolat</li></a>
                 <a href="webshop.html"><li class="animacio">Webshop</li></a>
                 <a href="regisztracio.html"><li class="animacio">Regisztráció</li></a>
             </ul>
+            <img src="fenykepek/menu.png" class="menu-gomb">
         </nav>
     </header>
 
@@ -40,10 +43,13 @@
 
         <div id="kontent2_jobb">
             <h1>Címünk</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.445654804673!2d-74.57615230845195!3d39.277660236891386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0eab397344f0b%3A0xd47db13e282781c8!2sLocal%20Gym%20and%20Fitness!5e1!3m2!1shu!2shu!4v1739987096354!5m2!1shu!2shu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.445654804673!2d-74.57615230845195!3d39.277660236891386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0eab397344f0b%3A0xd47db13e282781c8!2sLocal%20Gym%20and%20Fitness!5e1!3m2!1shu!2shu!4v1739987096354!5m2!1shu!2shu"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-    </main>  
+    </main>
 
     <footer>
         <div id="kontent5">
@@ -56,18 +62,33 @@
 
         <div id="kontent6">
             <ul>
-                <a href="hazirend.html"><li class="footer_lista">Házirend</li></a>
-                <a href="aszf.html"><li class="footer_lista">Ászf</li></a>
+                <a href="hazirend.html">
+                    <li class="footer_lista">Házirend</li>
+                </a>
+                <a href="aszf.html">
+                    <li class="footer_lista">Ászf</li>
+                </a>
             </ul>
         </div>
 
         <div id="kontent7">
-            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><img src="fenykepek/instagram.png" alt="instagram" class="footer_logo"></a>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><img
+                    src="fenykepek/instagram.png" alt="instagram" class="footer_logo"></a>
             <img src="fenykepek/tik-tok.png" alt="tiktok" class="footer_logo">
             <img src="fenykepek/facebook.png" alt="facebook" class="footer_logo">
         </div>
     </footer>
 
     <script src="script.js" defer></script>
+
+    <script>
+        const menuGomb = document.querySelector('.menu-gomb');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuGomb.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-menu');
+        });
+    </script>
 </body>
+
 </html>
