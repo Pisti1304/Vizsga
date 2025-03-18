@@ -112,8 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-    /*
-
     var kivalasztott = document.querySelectorAll('.kivalaszt');
     kivalasztott.forEach(select => {
         select.addEventListener('change', function (event) {
@@ -133,14 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ar.textContent = osszeg3;
             }
         });
-    });*/
-
-
-    const menuGomb = document.querySelector('.menu-gomb');
-    const navMenu = document.querySelector('.nav-menu');
-
-    menuGomb.addEventListener('click', () => {
-        navMenu.classList.toggle('mobile-menu');
     });
+    
 });
 

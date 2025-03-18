@@ -19,59 +19,74 @@ a {
 
 .navbar {
     position: relative;
+    padding: 1px;
     align-items: center;
     justify-content: space-between;
     display: flex;
     width: 100%;
+    height: 80px;
     color: white;
     background: transparent;
     backdrop-filter: blur(30px);
 }
- 
-/*Telefonos nézet*/
 
 .menu-gomb{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 40px;
-    cursor: pointer;
     display: none;
 }
 
-@media only screen and (max-width: 850px) {
+/*Telefonos nézet*/
+
+@media only screen and (max-width: 768px){
     .menu-gomb{
-        top: 21%;
-        right: 30px;
         display: block;
+        height: 40px;
+        padding: 10px;
+        cursor: pointer;
     }
-    .navbar {
-        background: transparent;
-        backdrop-filter: blur(30px);
-    }
-    .logofelirat{
-        top: 30px;
-        left: 30px;
-    }
-    .mobile-menu{
-        margin-top: 0px;
-        border-bottom-right-radius: 30%;
-        background: rgb(59, 227, 13);
-    }
-    .nav-menu li{
+    .navbar li{
         display: none;
+        margin: 30px auto;
     }
-    #foszoveg{
-        position: relative;
-        top: 0px;
+    .nav-menu{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(59, 227, 13);
+        margin-top: -900px;
+        transform: all 1s ease;
+    }
+
+    body #foszoveg{
+        font-size: 20px;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #kontent1{
+        height: 200px;
+        padding: 40px;
+        margin: 20px;
+    }
+
+    #szekcio{
+        min-height: 100vw;
+        min-width: 100vw;
+        text-align: center;
+    }
+
+    #kontent2{
+        padding: 40px;
+        margin: 20px;
+        text-align: center;
     }
 
 }
 
+
+
 .navbar ul {
     display: flex;
-    margin: 0;
-    padding: 0;
     justify-content: center;
     list-style: none;
 }
@@ -116,7 +131,7 @@ a {
 
 #foszoveg {
     margin-top: 20px;
-    padding: 30px 20px 20px 20px;
+    padding: 30px;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -144,54 +159,30 @@ a {
 
 #tartalom {
     position: relative;
-    height: 83vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#kontent1_bal {
-    position: absolute;
-    height: 350px;
-    width: 500px;
-    padding: 2rem;
-    margin: 40px 70px 20px;
-    left: 0;
-    text-align: center;
-    border-radius: 30px;
-    backdrop-filter: blur(25px);
-    border: 2px solid rgb(59, 227, 13);
-    text-align: justify;
-}
-
-#kontent1_bal h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    color: rgb(59, 227, 13);
-    font-weight: 600;
-    animation: animacio1 2.5s forwards !important;
-}
-
-#kontent1_bal p {
-    color: #f3f4f6;
-    text-align: justify;
-    animation: animacio1 2.5s forwards;
-}
-
-#kontent2_jobb {
-    position: absolute;
+#kontent1 {
+    /*position: absolute;*/
     height: 450px;
-    width: 500px;
-    padding: 1rem;
-    margin: 40px 70px 20px;
-    right: 0;
+    width: 700px;
+    padding: 25px;
+    top: 40px;
     text-align: center;
-    border-radius: 30px;
     backdrop-filter: blur(25px);
     border: 2px solid rgb(59, 227, 13);
+    border-radius: 30px;
+    text-align: justify;
+    flex-wrap: wrap; 
+    max-width: 1000px;
 }
 
-#kontent2_jobb h1 {
-    font-size: 3rem;
+#kontent1 h1 {
+    font-size: 2rem;
     line-height: 3rem;
     text-align: center;
     color: rgb(59, 227, 13);
@@ -199,8 +190,55 @@ a {
     animation: animacio1 2.5s forwards !important;
 }
 
-#kontent2_jobb iframe {
+#kontent1 ul{
+    list-style: none;
+}
+
+#kontent1 li {
+    color: white;
+    text-align: justify;
+    margin-top: 30px;
     animation: animacio1 2.5s forwards;
+}
+
+#szekcio1{
+    position: relative;
+    min-height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgb(59, 227, 13), white);
+}
+
+#kontent2{
+    max-width: 1000px;
+    flex-wrap: wrap; 
+    width: 1200px;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 40px;
+    backdrop-filter: blur(30px);
+}
+
+#kontent2 ul{
+    list-style: none;
+}
+
+
+
+
+#vonal{
+    position: relative;
+    bottom: 0;
+    height: 3px;
+    width: 100vw;
+    background-color: black;
 }
 
 
