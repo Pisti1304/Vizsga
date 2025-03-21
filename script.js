@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var str = document.getElementById("strength1");
     var str2 = document.getElementById("strength2");
 
-    pass.addEventListener('input', () => {
+   /* pass.addEventListener('input', () => {
         if (pass.value.length > 0) {
             pass.style.display = "block";
         } else {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             str2.innerHTML = "A jelszavad erős";
             str2.style.display = "block";
         }
-    });
+    });*/
 
     var gomb = document.getElementById("gomb");
     if (gomb) {
@@ -84,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     };
+
+
+
+
+    
 
     // function betolt(){
     //     document.getElementById("gomb").addEventListener('click', function (event) {

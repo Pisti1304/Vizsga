@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +15,256 @@ a {
     text-decoration: none;
 }
 
+#resz-menu{
+    display: none;
+}
+
+/*ANIMÁCIÓK*/
+
+.animacio {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+    position: relative;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.animacio::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    background-color: white;
+    transition: transform 0.4s ease;
+}
+
+.animacio:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logofelirat:hover {
+    transform: scale(1.1);
+}
+
+.animacio-kezd {
+    animation: animacio1 2s forwards;
+}
+
+@keyframes animacio1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacio2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*REGISZTRÁCIÓS OLDAL*/
+
+#regisztracio {
+    position: absolute;
+    display: flex;
+    height: 550px;
+    width: 400px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    border: 2px solid rgb(59, 227, 13);
+}
+
+#regisztracio input {
+    display: block;
+    margin: auto;
+    height: 35px;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid white;
+    animation: animacio1 2s forwards;
+}
+
+#regisztracio input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+#regisztracio input::placeholder {
+    font-size: 15px;
+    color: white;
+}
+
+#regisztracio form {
+    position: absolute;
+    color: white;
+    animation: animacio1 2s forwards;
+}
+
+#regisztracio button {
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    margin: 10px auto;
+    display: block;
+}
+
+#regisztracio button:hover {
+    cursor: pointer;
+    background-color: rgb(59, 227, 13);
+    transition: transform 0.5s ease;
+    color: black;
+}
+
+/*BEJELENTKEZÉS OLDAL*/
+
+.beje-reg {
+    color: rgb(59, 227, 13);
+}
+
+.beje-reg:hover {
+    color: white;
+}
+
+#bejelentkezes {
+    position: absolute;
+    display: flex;
+    height: 300px;
+    width: 400px;
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    border: 2px solid rgb(59, 227, 13);
+}
+
+#bejelentkezes input {
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    animation: animacio2 2s forwards;
+}
+
+#bejelentkezes input::placeholder {
+    font-size: 15px;
+    color: white;
+}
+
+#bejelentkezes input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+#bejelentkezes form {
+    position: absolute;
+    color: white;
+    animation: animacio2 2s forwards;
+}
+
+#bejelentkezes button {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    margin: 10px auto;
+}
+
+#bejelentkezes button:hover {
+    cursor: pointer;
+    background-color: rgb(59, 227, 13);
+    transition: transform 0.5s ease;
+    color: black;
+}
+
+/*KÉTLÉPCSŐS BEJELENTKEZÉS OLDAL*/
+
+#ketlepcsos {
+    border: 1px solid rgb(59, 227, 13);
+    width: 400px;
+    margin: auto;
+    height: 500px;
+    text-align: center;
+}
+
+.ketfaktor_gomb {
+    background-color: orange;
+    border: 1px solid orange;
+    width: 100px;
+    padding: 9px;
+}
+
+.hatjegyukod[type=number] {
+    width: 290px;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+.ketlepcso_label {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(59, 227, 13);
+}
+
+#ketlepcso_szoveg1 {
+    color: rgb(59, 227, 13);
+}
+
+#ketlepcso_szoveg2 {
+    color: white;
+}
 
 /*NAVBAR - STÍLUSOK*/
 
@@ -50,34 +301,6 @@ a {
     background-color: rgb(59, 227, 13);
 }
 
-.animacio {
-    text-decoration: none;
-    color: white;
-    transition: transform 0.3s ease;
-    position: relative;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-}
-
-.animacio::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    background-color: white;
-    transition: transform 0.4s ease;
-}
-
-.animacio:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
 #foszoveg {
     margin-top: 20px;
     padding: 30px;
@@ -99,92 +322,7 @@ a {
     transition: transform 0.5s ease;
 }
 
-.logofelirat:hover {
-    transform: scale(1.1);
-}
-
-@media only screen and (max-width: 768px) {
-    body{
-        font-size: 13px;
-    }
-
-    .menu-gomb {
-        display: block;
-        height: 40px;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .navbar li {
-        display: none;
-        margin: 30px auto;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        background: rgb(59, 227, 13);
-        margin-top: -900px;
-        transform: all 1s ease;
-    }
-
-    body #foszoveg {
-        font-size: 18px;
-        padding: 5px;
-    }
-
-    body #kontent1 {
-        height: auto; 
-        margin: 10px; 
-        padding: 8px; 
-    }
-
-    #szekcio {
-        min-height: 100vw;
-        min-width: 100vw;
-        text-align: center;
-        margin-top: auto;
-    }
-
-    #kontent2 {
-        padding: 40px;
-        margin: 10px;
-        text-align: center;
-    }
-
-    footer{
-        position: absolute;
-        height: 300px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #kontent6{
-        position: relative;
-        bottom: 90px;
-        display: flex;
-    }
-
-    #kontent7{
-        position: absolute; 
-        left: 50%;
-        transform: translate(-50%, 50%);
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-
-    }
-
-}
-
-
-
-
-
-/*BALOLDALI DIV*/
+/*FŐOLDAL - első lapja*/
 
 #tartalom {
     position: relative;
@@ -225,13 +363,15 @@ a {
 #kontent1 li {
     color: white;
     text-align: justify;
-    margin-top: 30px;
-    animation: animacio1 2.5s forwards;
+    margin-top: 20px;
+    animation: animacio1 2s forwards;
 }
+
+/*FŐOLDAL - második lapja*/
 
 #szekcio1 {
     position: relative;
-    min-height: 30vw;
+    min-height: 25vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,25 +381,24 @@ a {
 #kontent2 {
     max-width: 1000px;
     flex-wrap: wrap;
-    width: 1200px;
-    gap: 40px;
+    width: 1100px;
+    gap: 130px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
     border: 2px solid black;
     border-radius: 40px;
-    backdrop-filter: blur(30px);
+    box-shadow: 20px 20px 20px black;
 }
 
 #kontent2 ul {
     list-style: none;
 }
 
-
-
+/*LÁBLÉC KÓDJA*/
 
 #vonal {
     position: relative;
@@ -268,157 +407,6 @@ a {
     width: 100vw;
     background-color: black;
 }
-
-
-/*REGISZTRÁCIÓS OLDAL*/
-
-#kontent3 {
-    position: absolute;
-    display: flex;
-    height: 500px;
-    width: 400px;
-    padding: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 30px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    border: 2px solid rgb(59, 227, 13);
-}
-
-#kontent3 input {
-    display: block;
-    margin: auto;
-    height: 35px;
-    width: 250px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: transparent;
-    font-size: 15px;
-    color: #ffffff;
-    border: none;
-    border-bottom: 2px solid white;
-    animation: animacio1 2.5s forwards;
-}
-
-#kontent3 input:focus {
-    outline: none;
-    border-bottom: 2px solid rgb(59, 227, 13);
-}
-
-#kontent3 input::placeholder {
-    font-size: 15px;
-    color: white;
-}
-
-#kontent3 form {
-    position: absolute;
-    color: white;
-    animation: animacio1 2.5s forwards;
-}
-
-#kontent3 button {
-    height: 40px;
-    width: 200px;
-    border-radius: 20px;
-    border: 2px solid white;
-    color: white;
-    background: transparent;
-    margin: 10px auto;
-    display: block;
-}
-
-#kontent3 button:hover {
-    cursor: pointer;
-    background-color: rgb(59, 227, 13);
-    transition: transform 0.5s ease;
-    color: black;
-}
-
-
-/*BEJELENTKEZÉS OLDAL*/
-
-.beje-reg {
-    color: rgb(59, 227, 13);
-}
-
-.beje-reg:hover {
-    color: white;
-}
-
-#kontent4 {
-    position: absolute;
-    display: flex;
-    height: 300px;
-    width: 400px;
-    padding: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    border: 2px solid rgb(59, 227, 13);
-}
-
-#kontent4 input {
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 250px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: transparent;
-    font-size: 15px;
-    color: white;
-    border: none;
-    border-bottom: 2px solid white;
-    animation: animacio1 2.5s forwards;
-}
-
-#kontent4 input::placeholder {
-    font-size: 15px;
-    color: white;
-}
-
-#kontent4 input:focus {
-    outline: none;
-    border-bottom: 2px solid rgb(59, 227, 13);
-}
-
-#kontent4 form {
-    position: absolute;
-    color: white;
-    animation: animacio1 2.5s forwards;
-}
-
-#kontent4 button {
-    position: relative;
-    display: block;
-    height: 40px;
-    width: 200px;
-    border-radius: 20px;
-    border: 2px solid white;
-    color: white;
-    background: transparent;
-    margin: 10px auto;
-}
-
-#kontent4 button:hover {
-    cursor: pointer;
-    background-color: rgb(59, 227, 13);
-    transition: transform 0.5s ease;
-    color: black;
-}
-
-
-/*LÁBLÉC KÓDJA*/
 
 footer {
     position: absolute;
@@ -476,7 +464,7 @@ footer {
     color: white;
 }
 
-#kontent7{
+#kontent7 {
     position: absolute;
     display: flex;
     bottom: 10px;
@@ -495,63 +483,96 @@ footer {
     transform: scale(1.2);
 }
 
+/*RESZPONZÍV - MOBIL*/
 
-/*KÉTLÉPCSŐS BEJELENTKEZÉS KÓDJA*/
-
-#ketlepcsos {
-    border: 1px solid rgb(59, 227, 13);
-    width: 400px;
-    margin: auto;
-    height: 500px;
-    text-align: center;
-
-}
-
-.ketfaktor_gomb {
-    background-color: orange;
-    border: 1px solid orange;
-    width: 100px;
-    padding: 9px;
-}
-
-.hatjegyukod[type=number] {
-    width: 290px;
-    padding: 10px;
-    margin-top: 10px;
-
-}
-
-.ketlepcso_label {
-    font-weight: bold;
-    font-size: 18px;
-    color: rgb(59, 227, 13);
-}
-
-#ketlepcso_szoveg1 {
-    color: rgb(59, 227, 13);
-}
-
-#ketlepcso_szoveg2 {
-    color: white;
-}
-
-/*FŐOLDAL ANIMÁCIÓK*/
-
-.animacio-kezd {
-    animation: animacio1 2.5s forwards;
-}
-
-@keyframes animacio1 {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 13px;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+    .menu-gomb {
+        display: block;
+        height: 40px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .navbar li {
+        display: none;
+        margin: 30px auto;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(59, 227, 13);
+        margin-top: -900px;
+        transform: all 1s ease;
+    }
+
+    body #foszoveg {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    body #kontent1 {
+        height: auto;
+        margin: 10px;
+        padding: 8px;
+    }
+
+    #szekcio {
+        min-height: 100vw;
+        min-width: 100vw;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    #kontent2 {
+        padding: 15px;
+        margin: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 3px black;
+    }
+
+    footer {
+        position: absolute;
+        height: 300px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #kontent6 {
+        position: relative;
+        bottom: 3px;
+        display: flex;
+    }
+
+    #kontent7 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /*WEBSHOP*/
