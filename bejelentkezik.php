@@ -37,9 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fa_lejar = date("Y-m-d H:i:s", strtotime("+3 minutes"));
 
             
-            $sql1 = "UPDATE felhasznalok SET `2fa` = ?, `2fa_lejar` = ? WHERE id = ?";
-            vegrehajtas($kapcsolat, $sql1, [$fa, $fa_lejar, $felhasznalo['id']]);
-
+            $sql1 = "INSERT INTO fa_info (felhasznalo_id, `2fa`, `2fa_lejar`) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE `2fa` = ?, `2fa_lejar` = ?";
+            vegrehajtas($kapcsolat, $sql1, [ $felhasznalo['id'], $fa, $fa_lejar, $fa, $fa_lejar ]);
             
             $targy = "2FA kód Bejelentkezéshez";
             $uzenet = "2FA Kódod: $fa";
@@ -65,10 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             
-            $_SESSION['temp_user'] = ['id' => $felhasznalo['id'], '2fa' => $fa];
+            $_SESSION['temp_user'] = ['felhasznalo_id' => $felhasznalo['felhasznalo_id'], '2fa' => $fa];
 
             
-            header('Location: 2fahit.php');
+            header('Location: 2fa.html');
             exit();
         } else {
             $hibak[] = 'Hibás email vagy jelszó!';
