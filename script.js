@@ -66,7 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
         gomb.addEventListener('click', function (event) {
             var pass = document.getElementById('password').value;
             var pass2 = document.getElementById('password2').value;
-
+            var email = document.getElementById('email').value;
+            xhr.open("POST", "regisztral.php", true);
+            xhr.onload = function () {
+                if (email == email) {
+                    alert("Ez az e-mail cím már regisztrálva van!");
+                    event.preventDefault(); 
+                } 
             if (pass == "") {
                 alert("Nem lehet üres a jelszó mező");
                 event.preventDefault();
@@ -82,8 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
                 alert("Sikeres regisztráció!");
             }
-        });
-    };
+        };
+    });
+};
+
 
     /*
     var kivalasztott = document.querySelectorAll('.kivalaszt');
