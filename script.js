@@ -85,38 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-
-
-
-    
-
-    // function betolt(){
-    //     document.getElementById("gomb").addEventListener('click', function (event) {
-    //         var kontent2 = document.getElementById("kontent2");
-    //         var kontent3 = document.getElementById("kontent3");         
-    //         kontent2.style.display = "block";
-    //         kontent3.style.display = "none";
-    //     });
-    // }
-
-
-    document.getElementById("bejelentkezes").onclick = function () {
-        var form = document.getElementById("form1");
-        var kontent2 = document.getElementById("kontent2");
-        var kontent3 = document.getElementById("kontent3");   
-        kontent2.style.display = "none";
-        kontent3.style.display = "block";
-
-    };
-
-    document.getElementById("regisztracio").onclick = function () {
-        var kontent2 = document.getElementById("kontent2");
-        var kontent3 = document.getElementById("kontent3");
-        kontent3.style.display = "none";
-        kontent2.style.display = "block";
-
-    };
-
+    /*
     var kivalasztott = document.querySelectorAll('.kivalaszt');
     kivalasztott.forEach(select => {
         select.addEventListener('change', function (event) {
@@ -137,6 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-    
+    */
 });
 

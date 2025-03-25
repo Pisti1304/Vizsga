@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Gym - Webshop</title>
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <header>
         <nav class="navbar">
-            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p class="logofelirat">LocalGym</p></a>
-            <ul>
-                <a href="index.html"><li class="animacio">Főoldal</li></a>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank">
+                <p class="logofelirat">LocalGym</p>
+            </a>
+            <ul class="nav-menu">
+                <a href="index.html">
+                    <li class="animacio">Főoldal</li>
+                </a>
             </ul>
+            <img src="fenykepek/menu_bar2.png" class="menu-gomb">
+            <p class="zar-reszmenu">&times;</p>
         </nav>
+        <div class="legordulo-menu">
+            <a href="rolunk.html"><li>Rólunk</li></a>
+            <a href="kapcsolat.html"><li>Kapcsolat</li></a>
+            <a href="webshop.html"><li>Webshop</li></a>
+            <a href="regisztracio.html"><li>Regisztráció</li></a>
+        </div>
     </header>
 
+    <script>
+        const menugomb = document.querySelector('.menu-gomb');
+        const menubezar = document.querySelector('.zar-reszmenu');
+        const legordulomenu = document.querySelector('.legordulo-menu');
+
+        menugomb.onclick = function() {
+            legordulomenu.style.display = "block";
+            menugomb.style.display = "none";
+            menubezar.style.display = "block";
+        
+        menubezar.onclick = function(){
+            legordulomenu.style.display = "none";
+            menubezar.style.display = "none";
+            menugomb.style.display = "block";
+        }
+    }
+    </script>
+    
     <main id="keret">
         <div class="ikon">
             <img src="fenykepek/localgymcsokisfeherje.png" alt="Kep" class="kep2">
@@ -32,8 +64,8 @@
 
         <div class="ikon">
             <img src="fenykepek/localgymcsokisfeherje.png" alt="Kep" class="kep2">
-            <h3 class="termek_nev">Dinnyés pre-workout</h3>    
-            <select class="kivalaszt"> 
+            <h3 class="termek_nev">Dinnyés pre-workout</h3>
+            <select class="kivalaszt">
                 <option class="opcio1" value="500 g">500 g</option>
                 <option class="opcio2" value="1000 g">1000 g</option>
                 <option class="opcio3" value="2000 g">2000 g</option>
@@ -53,7 +85,7 @@
             <span class="ar"></span>
             <button class="gomb">Kosárba</button>
         </div>
-        
+
         <div class="ikon">
             <img src="fenykepek/localgymcsokisfeherje.png" alt="Kep" class="kep2">
             <h3 class="termek_nev">Alma</h3>
@@ -141,4 +173,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
