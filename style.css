@@ -23,7 +23,6 @@ a {
     display: none;
 }
 
-
 /*ANIMÁCIÓK*/
 
 .animacio {
@@ -246,31 +245,17 @@ a {
 /*KÉTLÉPCSŐS BEJELENTKEZÉS OLDAL*/
 
 #ketlepcsos {
-    border: 1px solid rgb(59, 227, 13);
-    width: 400px;
-    margin: auto;
+    position: absolute;
     height: 500px;
+    width: 400px;
+    padding: 5px;
+    top: 50px;
+    left: 35%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(59, 227, 13);
     text-align: center;
-}
-
-.ketfaktor_gomb {
-    background-color: orange;
-    border: 1px solid orange;
-    width: 100px;
-    padding: 9px;
-}
-
-.hatjegyukod[type=number] {
-    width: 290px;
-    padding: 10px;
-    margin-top: 10px;
-
-}
-
-.ketlepcso_label {
-    font-weight: bold;
-    font-size: 18px;
-    color: rgb(59, 227, 13);
+    border-radius: 20px;
 }
 
 #ketlepcso_szoveg1 {
@@ -279,7 +264,36 @@ a {
 
 #ketlepcso_szoveg2 {
     color: white;
+    font-size: 15px;
 }
+
+#lepcsos_form{
+    margin-top: 100px;
+}
+
+.ketfaktor_gomb{
+    margin-top: 200px;
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.ketfaktor_gomb:hover{
+    color: rgb(59, 227, 13);
+}
+
+.hatjegyukod[type=number] {
+    width: 300px;
+    padding: 10px;
+    outline: none;
+}
+
 
 /*NAVBAR - STÍLUSOK*/
 
@@ -499,7 +513,6 @@ footer {
     transform: scale(1.2);
 }
 
-
 /*RESZPONZÍV - MOBIL*/
 
 @media only screen and (max-width: 768px) {
@@ -517,6 +530,19 @@ footer {
         height: 45px;
         cursor: pointer;
         right: 20px;
+    }
+
+    #ketlepcsos{
+        background-color: rgba(255, 255, 255, 0.1);
+        left: 10%;
+    }
+
+    #lepcsos_form{
+        margin-top: 100px;
+    }
+
+    .ketfaktor_gomb{
+        margin-top: 200px;
     }
     
     .zar-reszmenu{
@@ -628,8 +654,6 @@ footer {
 
 
 
-
-
 /*WEBSHOP*/
 
 #szoveg1 {
@@ -637,8 +661,6 @@ footer {
     text-align: center;
     font-size: 20px;
 }
-
-
 
 #keret {
     position: relative;

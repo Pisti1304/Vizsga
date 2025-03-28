@@ -8,12 +8,11 @@
 </head>
 <body>
     <div id="ketlepcsos">
-        <h1 id="ketlepcso_szoveg1">Kétlépcsős Bejelentkezés</h1>
-        <p id="ketlepcso_szoveg2">Gépeld be a 6 jegyű kódot, amit emailben kaptál! <br> 
-        <!-- Email címed: <?php echo ($_SESSION['email']); ?></p> -->
-        <form method="post" action="2fahit.php">
-            <label class="ketlepcso_label" for="otp">Üsd be a kétlépcsős kódot:</label><br>
-            <input type="number" name="otp" pattern="\d{6}" placeholder="6 jegyű kód" class="hatjegyukod" required><br><br>
+        <h2 id="ketlepcso_szoveg1">Kétlépcsős Bejelentkezés</h2>
+        
+        <form id="lepcsos_form" method="post" action="2fahit.php">
+            <p id="ketlepcso_szoveg2">Gépeld be a 6 jegyű kódot, amit emailben kaptál!</p> 
+            <input type="number" class="hatjegyukod" placeholder="Írd be a hatjegyű kódod" required> 
             <button type="submit" class="ketfaktor_gomb">Kód ellenőrzés</button>
         </form>
     </div>
