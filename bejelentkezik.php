@@ -27,6 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$felhasznalok) {
         $hibak[] = 'Hibás email vagy jelszó!';
+        print json_encode(value: $hibak);
+        header('Location: bejelentkezes.html');
+
+        
     } else {
         $felhasznalo = $felhasznalok[0]; 
 
@@ -62,8 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } catch (Exception $e) {
                 $hibak[] = "Email küldési hiba: " . $mail->ErrorInfo;
             }
-
-            
             $_SESSION['temp_user'] = ['felhasznalo_id' => $felhasznalo['felhasznalo_id'], '2fa' => $fa];
 
             
@@ -71,10 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             $hibak[] = 'Hibás email vagy jelszó!';
+            print json_encode(value: $hibak);
+            
+            
         }
+        
     }
 }
-
 
 
 ?>

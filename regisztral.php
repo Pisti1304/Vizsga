@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['vezeteknev'], $_POST['
         ]);
 
         echo "Sikeres regisztráció!";
+        header("Location: bejelentkezes.html");
     }
 }
 ?>
