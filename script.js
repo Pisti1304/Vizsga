@@ -52,31 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         };
     }
-});
 
+    var kivalasztott = document.querySelectorAll('.kivalaszt');
+    kivalasztott.forEach(select => {
+        select.addEventListener('change', function (event) {
+            var ar = event.target.closest('.ikon').querySelector('.ar');
 
+            let osszeg1 = "10.000 FT";
+            let osszeg2 = "20.000 FT";
+            let osszeg3 = "30.000 FT";
 
-/*
-var kivalasztott = document.querySelectorAll('.kivalaszt');
-kivalasztott.forEach(select => {
-    select.addEventListener('change', function (event) {
-        var ar = event.target.closest('.ikon').querySelector('.ar');
-
-        let osszeg1 = "10.000 FT";
-        let osszeg2 = "20.000 FT";
-        let osszeg3 = "30.000 FT";
-
-        if (event.target.value === "500 g") {
-            ar.textContent = osszeg1;
-        }
-        else if (event.target.value === "1000 g") {
-            ar.textContent = osszeg2;
-        }
-        else if (event.target.value === "2000 g") {
-            ar.textContent = osszeg3;
-        }
+            if (event.target.value === "500 g") {
+                ar.textContent = osszeg1;
+            }
+            else if (event.target.value === "1000 g") {
+                ar.textContent = osszeg2;
+            }
+            else if (event.target.value === "2000 g") {
+                ar.textContent = osszeg3;
+            }
+        });
     });
 });
-*/
 
 

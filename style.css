@@ -1,5 +1,4 @@
-body,
-html {
+.index {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -647,6 +646,14 @@ footer {
 
 /*WEBSHOP*/
 
+#webshop{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    background: black;
+}
+
 #szoveg1 {
     padding: 30px;
     text-align: center;
@@ -654,8 +661,13 @@ footer {
 }
 
 #keret {
+    background: linear-gradient(to top, rgb(59, 227, 13), white);
+    /*background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;*/
     position: relative;
-    height: 100%;
+    min-height: 100vh;
     width: 70vw;
     top: 60px;
     gap: 30px;
@@ -667,6 +679,7 @@ footer {
 }
 
 .ikon {
+    margin: 20px;
     height: 350px;
     width: 200px;
     text-align: center;
