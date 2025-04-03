@@ -29,27 +29,6 @@
             <a href="regisztracio.html"><li>Regisztráció</li></a>
         </div>
     </header>
-
-    <script>
-        const menugomb = document.querySelector('.menu-gomb');
-        const menubezar = document.querySelector('.zar-reszmenu');
-        const legordulomenu = document.querySelector('.legordulo-menu');
-
-        menugomb.onclick = function() {
-            legordulomenu.style.display = "block";
-            menugomb.style.display = "none";
-            menubezar.style.display = "block";
-        
-            menubezar.onclick = function(){
-                legordulomenu.style.display = "none";
-                menubezar.style.display = "none";
-                menugomb.style.display = "block";
-                location.reload();
-        }
-
-    }
-    </script>
-
     <div id="foszoveg">Üdvözlünk a LocalGym hivatalos oldalán!</div>
 
     <main id="tartalom">

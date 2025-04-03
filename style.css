@@ -645,15 +645,6 @@ footer {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /*WEBSHOP*/
 
 #szoveg1 {
@@ -664,7 +655,7 @@ footer {
 
 #keret {
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 70vw;
     top: 60px;
     gap: 30px;
@@ -679,14 +670,13 @@ footer {
     height: 350px;
     width: 200px;
     text-align: center;
+    background-color: white;
     border: 2px solid black;
-    box-shadow: 5px 5px 5px 5px black;
-    background-color: gray;
 }
 
 .termek_nev {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .kivalaszt {
@@ -694,6 +684,11 @@ footer {
     height: 30px;
     width: 100px;
     margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.kivalaszt option{
+    cursor: pointer;
 }
 
 .ar {
@@ -708,6 +703,12 @@ footer {
     margin-top: 50px;
     margin: auto;
     cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gomb:hover{
+    transform: scale(1.1);
 }
 
 #kosartartalom {
