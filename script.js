@@ -72,7 +72,126 @@ document.addEventListener("DOMContentLoaded", () => {
                 ar.textContent = osszeg3;
             }
         });
+
     });
+
+    var megnyit_kosar = document.querySelector('.kosardiv');
+    var bezar_kosar = document.querySelector('.tartalom_bezar');
+    var kosar_lista = document.querySelector('.kosar_lista');
+    var kosar_tartalma2 = document.querySelector('.kosar_tartalma2');
+    var body = document.querySelector('.kosar_tartalma');
+    var vegosszeg = document.querySelector('.vegosszeg');
+    var mennyiseg = document.querySelector('.mennyiseg');
+    var kosar_urit = document.querySelector('.menu_rendszer_bezar');
+
+    megnyit_kosar.addEventListener('click', ()=>{
+        body.style.display = "block";
+    });
+
+    bezar_kosar.addEventListener('click', ()=>{
+        body.style.display = "none";
+    });
+
+    let termekek = [
+        {
+            id: 1,
+            nev: "Csokis fehérje",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+        {
+            id: 2,
+            nev: "Kreatin",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+        {
+            id: 3,
+            nev: "Aminosav",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+        {
+            id: 4,
+            nev: "Fehérje",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+        {
+            id: 5,
+            nev: "Fehérje",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+        {
+            id: 6,
+            nev: "Fehérje",
+            image: "fenykepek/localgymcsokisfeherje.png",
+            ar: 10000
+        },
+    ];
+
+    let kosar = []; /*ListCards*/
+
+    function initApp(){
+        termekek.forEach((value, key)=>{
+            let ujdiv = document.createElement('div');
+            ujdiv.classList.add('ikon');
+            ujdiv.innerHTML = `
+                <img src="${value.image}"/>
+                <div class="neve">${value.nev}</div>
+                <div class="ar">${value.ar.toLocaleString()}</div>
+                <button onclick="kosarba(${key})">Kosárba</button>`;
+            kosar_lista.appendChild(ujdiv); 
+        })
+    }
+    initApp();
+    window.kosarba = function(key){
+        if(kosar[key] == null){
+            kosar[key] = termekek[key];
+            kosar[key].mennyiseg = 1;
+        }
+        kosarfeltolt();
+    }
+
+    function kosarfeltolt(){
+        kosar_tartalma2.innerHTML = '';
+        let count = 0;
+        let vegosszeg_ = 0;
+        kosar.forEach((value, key) => {
+            vegosszeg_ = vegosszeg_ + value.ar;
+            count = count + value.mennyiseg;
+
+            if(value != null){
+                let ujdiv = document.createElement('li');
+                ujdiv.innerHTML = `
+                    <div><img src="${value.image}"</div>
+                    <div>${value.nev}</div>
+                    <div>Ár: ${value.ar.toLocaleString()} FT</div>
+                    <div>
+                        <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg - 1})">-</button>
+                        <div class="count">${value.mennyiseg}</div>
+                        <button onclick="valtozat_mennyiseg(${key}, ${value.mennyiseg + 1})">+</button>
+                    </div>
+                `;
+                kosar_tartalma2.appendChild(ujdiv);
+            }
+        })
+        vegosszeg.innerText = vegosszeg_.toLocaleString();
+        mennyiseg.innerText = count;
+    }
+
+    function valtoztat_mennyiseg(key, mennyiseg){
+        if(mennyiseg == 0){
+            delete kosar[key];
+        }
+        else{
+            kosar[key].mennyiseg = mennyiseg;
+            kosar[key].ar = mennyiseg * termekek[key].ar;
+        }
+        kosarfeltolt();
+    }
+
 });
 
 
