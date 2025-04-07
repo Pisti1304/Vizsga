@@ -767,10 +767,24 @@ footer {
     color: rgb(59, 227, 13);
     padding: 10px;
     width: 50%;
+    border: none;
     cursor: pointer;
 }
 
+.kosar_lista .ikon button:hover{
+    color: black;
+    background-color: rgb(59, 227, 13);
+    transition: 0.3s ease;
+}
+
+.kosar_tartalma2{
+    max-height: 550px;
+    overflow-y: auto;
+}
+
 .kosar_tartalma2 li{
+    display: flex;
+    gap: 10px;
     grid-template-columns: 100px repeat(3, 1fr);
     color: white;
     margin-bottom: 20px;
@@ -778,7 +792,7 @@ footer {
 }
 
 .kosar_tartalma2 li div{
-    gap: 5px;
+    gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -799,7 +813,7 @@ footer {
 }
 
 .menu_rendszer{
-    display: flex;;
+    display: flex;
 }
 
 #menu_rendszer_bezar{
@@ -808,4 +822,9 @@ footer {
     right: 0;
     cursor: pointer;
 } 
+
+.kepek_div{
+    display: flex;
+    margin-top: 20px;
+}
 

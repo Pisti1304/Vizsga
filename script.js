@@ -95,46 +95,46 @@ document.addEventListener("DOMContentLoaded", () => {
     let termekek = [
         {
             id: 1,
-            nev: "Csokis fehérje",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Csokis fehérje',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
         {
             id: 2,
-            nev: "Kreatin",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Kreatin',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
         {
             id: 3,
-            nev: "Aminosav",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Aminosav',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
         {
             id: 4,
-            nev: "Fehérje",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Fehérje',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
         {
             id: 5,
-            nev: "Fehérje",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Fehérje',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
         {
             id: 6,
-            nev: "Fehérje",
-            image: "fenykepek/localgymcsokisfeherje.png",
+            nev: 'Fehérje',
+            image: 'fenykepek/localgymcsokisfeherje.png',
             ar: 10000
         },
     ];
 
-    let kosar = []; /*ListCards*/
+    let kosar = []; 
 
     function initApp(){
-        termekek.forEach((value, key)=>{
+        termekek.forEach((value, key) =>{
             let ujdiv = document.createElement('div');
             ujdiv.classList.add('ikon');
             ujdiv.innerHTML = `
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             kosar_lista.appendChild(ujdiv); 
         })
     }
-    initApp();
+    initApp()
     window.kosarba = function(key){
         if(kosar[key] == null){
             kosar[key] = termekek[key];
@@ -158,22 +158,21 @@ document.addEventListener("DOMContentLoaded", () => {
         kosar_tartalma2.innerHTML = '';
         let count = 0;
         let vegosszeg_ = 0;
-        kosar.forEach((value, key) => {
+        kosar.forEach((value, key)=>{
             vegosszeg_ = vegosszeg_ + value.ar;
             count = count + value.mennyiseg;
 
             if(value != null){
                 let ujdiv = document.createElement('li');
                 ujdiv.innerHTML = `
-                    <div><img src="${value.image}"</div>
-                    <div>${value.nev}</div>
-                    <div>Ár: ${value.ar.toLocaleString()} FT</div>
-                    <div>
-                        <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg - 1})">-</button>
-                        <div class="count">${value.mennyiseg}</div>
-                        <button onclick="valtozat_mennyiseg(${key}, ${value.mennyiseg + 1})">+</button>
-                    </div>
-                `;
+                <div><img src="${value.image}"/></div>
+                <div>${value.nev}</div>
+                <div>${value.ar.toLocaleString()}</div>
+                <div>
+                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg - 1})">-</button>
+                    <div class="count">${value.mennyiseg}</div>
+                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg + 1})">+</button>
+                </div>`;
                 kosar_tartalma2.appendChild(ujdiv);
             }
         })
@@ -184,14 +183,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function valtoztat_mennyiseg(key, mennyiseg){
         if(mennyiseg == 0){
             delete kosar[key];
-        }
-        else{
+        }else{
             kosar[key].mennyiseg = mennyiseg;
             kosar[key].ar = mennyiseg * termekek[key].ar;
         }
         kosarfeltolt();
     }
-
 });
 
 
