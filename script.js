@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     megnyit_kosar.addEventListener('click', ()=>{
         body.style.display = "block";
+        
     });
 
     bezar_kosar.addEventListener('click', ()=>{
@@ -148,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initApp()
     window.kosarba = function(key){
         if(kosar[key] == null){
-            kosar[key] = termekek[key];
+            kosar[key] = JSON.parse(JSON.stringify(termekek[key]));
             kosar[key].mennyiseg = 1;
         }
         kosarfeltolt();
@@ -169,9 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>${value.nev}</div>
                 <div>${value.ar.toLocaleString()}</div>
                 <div>
-                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg - 1})">-</button>
+                    <button onclick="valtoztat_mennyiseg_minusz(${key}, ${value.mennyiseg - 1})">-</button>
                     <div class="count">${value.mennyiseg}</div>
-                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg + 1})">+</button>
+                    <button onclick="valtoztat_mennyiseg_plusz(${key}, ${value.mennyiseg + 1})">+</button>
                 </div>`;
                 kosar_tartalma2.appendChild(ujdiv);
             }
@@ -180,15 +181,35 @@ document.addEventListener("DOMContentLoaded", () => {
         mennyiseg.innerText = count;
     }
 
-    window.valtoztat_mennyiseg = function(key, mennyiseg){
+    window.valtoztat_mennyiseg_plusz = function(key, mennyiseg){
         if(mennyiseg == 0){
-            delete kosar[key];
+            delete kosar[key];  
+            delete vegosszeg_; 
         }else{
             kosar[key].mennyiseg = mennyiseg;
-            kosar[key].ar = mennyiseg * termekek[key].ar;
+            kosar[key].ar =  termekek[key].ar + kosar[key].ar;
         }
         kosarfeltolt();
     }
+    
+    window.valtoztat_mennyiseg_minusz = function(key, mennyiseg){
+        if(mennyiseg == 0){
+            delete kosar[key];  
+            delete vegosszeg_; 
+        }else{
+            kosar[key].mennyiseg = mennyiseg;
+            kosar[key].ar -=  termekek[key].ar ;
+        }
+        kosarfeltolt();
+    }
+
+    
+    window.kosar_urit = function() {
+        kosar = [];  
+        kosarfeltolt();    
+    }
+    
+   
 });
 
 
