@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mennyiseg.innerText = count;
     }
 
-    function valtoztat_mennyiseg(key, mennyiseg){
+    window.valtoztat_mennyiseg = function(key, mennyiseg){
         if(mennyiseg == 0){
             delete kosar[key];
         }else{
