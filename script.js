@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     megnyit_kosar.addEventListener('click', ()=>{
         body.style.display = "block";
+        
     });
 
     bezar_kosar.addEventListener('click', ()=>{
@@ -185,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         vegosszeg.innerText = vegosszeg_.toLocaleString();
         mennyiseg.innerText = count;
     }
-    
+
     window.valtoztat_mennyiseg_plusz = function(key, mennyiseg){
         if(mennyiseg == 0){
             delete kosar[key];  
@@ -212,7 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
         kosar = [];  
         kosarfeltolt();    
     }
-
     const selectedElements = document.querySelectorAll('.mertekegyseg');
     selectedElements.forEach(select => {
         select.addEventListener('change', function (event) {
@@ -230,8 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ar.textContent = `${osszeg3.toLocaleString()} -,`;
             }           
         });
-    });
-    
+    }); 
 });
 
 
