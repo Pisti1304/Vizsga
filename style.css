@@ -644,6 +644,27 @@ footer {
         bottom: 0;
         left: 250px;
     }
+
+    #webshop{
+        font-size: 15px;
+    }
+
+    .kosar_lista{
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+    }
+
+    .kosar_lista .ar {
+        font-size: 17px;
+    }
+
+    .kosar_tartalma{
+        height: 100vh;
+        width: 70vw;
+    }
+
 }
 
 /*WEBSHOP*/
@@ -657,9 +678,10 @@ footer {
 }
 
 .kosardiv{
-    position: relative;
+    position: absolute;
     text-align: right;
-    margin-right: 40px;
+    bottom: 15px;
+    right: 180px;
     cursor: pointer;
 }
 
@@ -679,14 +701,6 @@ footer {
     top: 15px;
     left: 90%;
     padding: 3px 10px;
-}
-
-.kosar_lista{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 50px;
 }
 
 .kosar_tartalma{
@@ -738,24 +752,40 @@ footer {
     left: calc(100% - 500px);
 }
 
-.kosar_tartalma{
-    left: calc(100% - 500px);
+.kosar_lista{
+    width: 65%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .kosar_lista .ikon{
+    height: 350px;
+    width: 300px;
     text-align: center;
+    margin: auto;
+    border-radius: 25px;
     background-color: white;
-    padding: 10px;
     box-shadow: 0 50px 50px rgb(59, 227, 13);
-    letter-spacing: 1px;
 }
 
 .kosar_lista .ikon img{
+    margin-top: 12px;
     width: 90%;
 }
 
 .kosar_lista .ikon .neve{
     font-weight: 600;
+}
+
+.mertekegyseg{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .kosar_lista .ikon .ar{
@@ -765,6 +795,7 @@ footer {
 .kosar_lista .ikon button{
     background-color: black;
     color: rgb(59, 227, 13);
+    border-radius: 15px;
     padding: 10px;
     width: 50%;
     border: none;
@@ -786,8 +817,8 @@ footer {
     display: flex;
     gap: 10px;
     grid-template-columns: 100px repeat(3, 1fr);
+    margin-bottom: 30px;
     color: white;
-    margin-bottom: 20px;
     list-style: none;
 }
 
@@ -822,6 +853,7 @@ footer {
     right: 0;
     cursor: pointer;
 } 
+
 
 .kepek_div{
     display: flex;

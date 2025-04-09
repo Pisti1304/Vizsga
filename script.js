@@ -102,13 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: 2,
             nev: 'Kreatin',
-            image: 'fenykepek/localgymcsokisfeherje.png',
+            image: 'fenykepek/localgymkreatin.png',
             ar: 10000
         },
         {
             id: 3,
             nev: 'Aminosav',
-            image: 'fenykepek/localgymcsokisfeherje.png',
+            image: 'fenykepek/localgymepresfeherje.png',
             ar: 10000
         },
         {
@@ -130,30 +130,36 @@ document.addEventListener("DOMContentLoaded", () => {
             ar: 10000
         },
     ];
-
+    
     let kosar = []; 
-
+    
     function initApp(){
         termekek.forEach((value, key) =>{
             let ujdiv = document.createElement('div');
             ujdiv.classList.add('ikon');
             ujdiv.innerHTML = `
-                <img src="${value.image}"/>
-                <div class="neve">${value.nev}</div>
-                <div class="ar">${value.ar.toLocaleString()}</div>
+            <img src="${value.image}"/>
+            <div class="neve">${value.nev}</div>
+            <select class="mertekegyseg">
+                <option value="500 g">500 g</option>
+                <option value="1000 g">1000 g</option>
+                <option value="2000 g">2000 g</option>
+            </select>
+                <div class="ar">${value.ar.toLocaleString()} -,</div>
                 <button onclick="kosarba(${key})">Kosárba</button>`;
             kosar_lista.appendChild(ujdiv); 
         })
     }
     initApp()
+
     window.kosarba = function(key){
         if(kosar[key] == null){
-            kosar[key] = termekek[key];
+            kosar[key] = JSON.parse(JSON.stringify(termekek[key]));
             kosar[key].mennyiseg = 1;
         }
         kosarfeltolt();
     }
-
+    
     function kosarfeltolt(){
         kosar_tartalma2.innerHTML = '';
         let count = 0;
@@ -161,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         kosar.forEach((value, key)=>{
             vegosszeg_ = vegosszeg_ + value.ar;
             count = count + value.mennyiseg;
-
+            
             if(value != null){
                 let ujdiv = document.createElement('li');
                 ujdiv.innerHTML = `
@@ -169,26 +175,63 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>${value.nev}</div>
                 <div>${value.ar.toLocaleString()}</div>
                 <div>
-                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg - 1})">-</button>
-                    <div class="count">${value.mennyiseg}</div>
-                    <button onclick="valtoztat_mennyiseg(${key}, ${value.mennyiseg + 1})">+</button>
-                </div>`;
-                kosar_tartalma2.appendChild(ujdiv);
-            }
-        })
+                    <button onclick="valtoztat_mennyiseg_minusz(${key}, ${value.mennyiseg - 1})">-</button>
+                    <div class="count">${value.mennyiseg} DB</div>
+                    <button onclick="valtoztat_mennyiseg_plusz(${key}, ${value.mennyiseg + 1})">+</button>
+                    </div>`;
+                    kosar_tartalma2.appendChild(ujdiv);
+                }
+            })
         vegosszeg.innerText = vegosszeg_.toLocaleString();
         mennyiseg.innerText = count;
     }
-
-    function valtoztat_mennyiseg(key, mennyiseg){
+    
+    window.valtoztat_mennyiseg_plusz = function(key, mennyiseg){
         if(mennyiseg == 0){
-            delete kosar[key];
+            delete kosar[key];  
+            delete vegosszeg_; 
         }else{
             kosar[key].mennyiseg = mennyiseg;
-            kosar[key].ar = mennyiseg * termekek[key].ar;
+            kosar[key].ar =  termekek[key].ar + kosar[key].ar;
         }
         kosarfeltolt();
     }
+    
+    window.valtoztat_mennyiseg_minusz = function(key, mennyiseg){
+        if(mennyiseg == 0){
+            delete kosar[key];  
+            delete vegosszeg_; 
+        }else{
+            kosar[key].mennyiseg = mennyiseg;
+            kosar[key].ar -=  termekek[key].ar ;
+        }
+        kosarfeltolt();
+    }
+    
+    window.kosar_urit = function() {
+        kosar = [];  
+        kosarfeltolt();    
+    }
+
+    const selectedElements = document.querySelectorAll('.mertekegyseg');
+    selectedElements.forEach(select => {
+        select.addEventListener('change', function (event) {
+            const ar = event.target.closest('.ikon').querySelector('.ar');
+    
+            let osszeg1 = 6500;
+            let osszeg2 = 10000;
+            let osszeg3 = 14000;
+    
+            if (event.target.value === "500 g") {
+                ar.textContent = `${osszeg1.toLocaleString()} -,`;
+            } else if (event.target.value === "1000 g") {
+                ar.textContent = `${osszeg2.toLocaleString()} -,`;
+            } else if (event.target.value === "2000 g") {
+                ar.textContent = `${osszeg3.toLocaleString()} -,`;
+            }           
+        });
+    });
+    
 });
 
 
