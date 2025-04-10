@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kártyás Fizetés</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("payment-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                window.location.href = "sikeres.html";
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Kártyás Fizetés</h2>
+    <form id="payment-form">
+        <div class="form-group card-number-container">
+            <label for="card-number">Bankkártyaszám:</label>
+            <input type="text" id="card-number" maxlength="16" placeholder="1234 5678 9012 3456" required>
+        </div>
+
+        <div class="form-group expiry-date-container">
+            <label for="expiry-date">Lejárati dátum:</label>
+            <input type="month" id="expiry-date" required>
+        </div>
+
+        <div class="form-group cvc-container">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" placeholder="123" required>
+        </div>
+
+        <div class="form-group shipping-container">
+            <label for="shipping">Szállítási mód:</label>
+            <select id="shipping">
+                <option value="standard">Normál szállítás (3-5 nap)</option>
+                <option value="express">Expressz szállítás (1-2 nap)</option>
+            </select>
+        </div>
+
+        <div class="form-group address-container">
+            <label for="address">Szállítási cím:</label>
+            <input type="text" id="address" placeholder="Add meg a címed" required>
+        </div>
+
+        <button type="submit">Fizetés</button>
+    </form>
+</div>
+</body>
+</html>

@@ -209,7 +209,24 @@ document.addEventListener("DOMContentLoaded", () => {
         kosarfeltolt();    
     }
     
-   
+    
+    const fizetesValaszto = document.getElementById("fizetesi-valaszto");
+    const vegosszegBox = document.querySelector(".vegosszeg");
+
+    if (vegosszegBox && fizetesValaszto) {
+        vegosszegBox.addEventListener("click", () => {
+            if (kosar.length > 0) {
+                fizetesValaszto.style.display = "block";
+            } else {
+                alert("A kosarad üres, előbb adj hozzá termékeket!");
+            }
+        });
+    }
 });
+
+
+
+
+  
 
 

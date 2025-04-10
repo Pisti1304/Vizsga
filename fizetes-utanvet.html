@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utánvétes Fizetés</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("cash-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                window.location.href = "sikeres.html";
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Utánvétes Fizetés</h2>
+    <form id="cash-form">
+        <div class="form-group shipping-container">
+            <label for="shipping">Szállítási mód:</label>
+            <select id="shipping">
+                <option value="standard">Normál szállítás (3-5 nap)</option>
+                <option value="express">Expressz szállítás (1-2 nap)</option>
+            </select>
+        </div>
+
+        <div class="form-group address-container">
+            <label for="address">Szállítási cím:</label>
+            <input type="text" id="address" placeholder="Add meg a címed" required>
+        </div>
+
+        <button type="submit">Megrendelés leadása</button>
+    </form>
+</div>
+</body>
+</html>
