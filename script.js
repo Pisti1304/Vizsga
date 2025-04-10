@@ -53,28 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    var kivalasztott = document.querySelectorAll('.kivalaszt');
-    kivalasztott.forEach(select => {
-        select.addEventListener('change', function (event) {
-            var ar = event.target.closest('.ikon').querySelector('.ar');
-
-            let osszeg1 = "10.000 FT";
-            let osszeg2 = "20.000 FT";
-            let osszeg3 = "30.000 FT";
-
-            if (event.target.value === "500 g") {
-                ar.textContent = osszeg1;
-            }
-            else if (event.target.value === "1000 g") {
-                ar.textContent = osszeg2;
-            }
-            else if (event.target.value === "2000 g") {
-                ar.textContent = osszeg3;
-            }
-        });
-
-    });
-
     var megnyit_kosar = document.querySelector('.kosardiv');
     var bezar_kosar = document.querySelector('.tartalom_bezar');
     var kosar_lista = document.querySelector('.kosar_lista');
@@ -131,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ar: 10000
         },
     ];
-    
+
     let kosar = []; 
-    
+
     function initApp(){
         termekek.forEach((value, key) =>{
             let ujdiv = document.createElement('div');
@@ -160,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         kosarfeltolt();
     }
-    
+
     function kosarfeltolt(){
         kosar_tartalma2.innerHTML = '';
         let count = 0;
@@ -168,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         kosar.forEach((value, key)=>{
             vegosszeg_ = vegosszeg_ + value.ar;
             count = count + value.mennyiseg;
-            
+
             if(value != null){
                 let ujdiv = document.createElement('li');
                 ujdiv.innerHTML = `
@@ -186,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         vegosszeg.innerText = vegosszeg_.toLocaleString();
         mennyiseg.innerText = count;
     }
-
+    
     window.valtoztat_mennyiseg_plusz = function(key, mennyiseg){
         if(mennyiseg == 0){
             delete kosar[key];  
@@ -197,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         kosarfeltolt();
     }
-    
+
     window.valtoztat_mennyiseg_minusz = function(key, mennyiseg){
         if(mennyiseg == 0){
             delete kosar[key];  
@@ -208,35 +186,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         kosarfeltolt();
     }
-    
+
     window.kosar_urit = function() {
         kosar = [];  
         kosarfeltolt();    
     }
+
     const selectedElements = document.querySelectorAll('.mertekegyseg');
     selectedElements.forEach(select => {
         select.addEventListener('change', function (event) {
             const ar = event.target.closest('.ikon').querySelector('.ar');
-    
-<<<<<<< HEAD
-    
-    const fizetesValaszto = document.getElementById("fizetesi-valaszto");
-    const vegosszegBox = document.querySelector(".vegosszeg");
 
-    if (vegosszegBox && fizetesValaszto) {
-        vegosszegBox.addEventListener("click", () => {
-            if (kosar.length > 0) {
-                fizetesValaszto.style.display = "block";
-            } else {
-                alert("A kosarad üres, előbb adj hozzá termékeket!");
-            }
-        });
-    }
-=======
             let osszeg1 = 6500;
             let osszeg2 = 10000;
             let osszeg3 = 14000;
-    
+
             if (event.target.value === "500 g") {
                 ar.textContent = `${osszeg1.toLocaleString()} -,`;
             } else if (event.target.value === "1000 g") {
@@ -245,13 +209,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 ar.textContent = `${osszeg3.toLocaleString()} -,`;
             }           
         });
-    }); 
->>>>>>> 5db5f2f9de4bfef83683c1693b65aec12c680508
-});
-
-
-
-
-  
-
-
+    });
+}); 
