@@ -665,7 +665,6 @@ footer {
         margin: 0 auto;
     }
     
-    
     .kosar_lista .ar {
         font-size: 17px;
     }
@@ -686,7 +685,22 @@ footer {
     #kontent8 .option{
         font-size: 20px;
     }
-    
+
+    #fizetes_kartya , #fizetes_utanvet, #sikeres {
+        font-size: 16px;
+    }
+
+    #szallitasi_mod , #szallitasi_mod2 {
+        width: 150px;
+    }
+
+    .kartya_fizet_gomb{
+        width: 150px;
+    }
+
+    #rolunk_main{
+        display: grid;
+    }
 }
 
 /*WEBSHOP*/
@@ -818,6 +832,10 @@ footer {
     margin: 20px;
 }
 
+.vegosszeg{
+    color: black;
+}
+
 .kosar_lista .ikon button {
     background-color: black;
     color: rgb(59, 227, 13);
@@ -915,13 +933,163 @@ footer {
 }
 
 #kontent9{
-    height: 500px;
+    height: 450px;
+    width: 350px;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
     background-color: white;
     box-shadow: 0 50px 50px rgb(59, 227, 13);
+    color: black;
 }
 
-#kontent9 #fizetesi_form{
+#fizetesi_form{
     display: grid;
     gap: 20px;
 }
 
+#fizetesi_form input{
+    height: 30px;
+    width: 250px;
+    margin: auto;
+    border: none;
+}
+
+#fizetesi_form input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+#kartya_fizet_gomb{
+    height: 30px;
+    width: 20vw;
+    border-radius: 15px;
+    border: none;
+    margin: auto;
+}
+
+#kartya_fizet_gomb:hover{
+    color: black;
+    background-color: rgb(59, 227, 13);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#szallitasi_mod{
+    border: none;
+    width: 20vw;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#szallitasi_mod:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+#fizetes_utanvet{
+    background-color: black;
+}
+
+#kontent10{
+    height: 300px;
+    width: 350px;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    color: black;
+}
+
+#fizetesi_form2{
+    display: grid;
+    gap: 20px;
+}
+
+#fizetesi_form2 input{
+    height: 30px;
+    width: 250px;
+    margin: auto;
+    border: none;
+}
+
+#fizetesi_form2 input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+.kartya_fizet_gomb{
+    height: 30px;
+    width: 20vw;
+    border-radius: 15px;
+    border: none;
+    margin: auto;
+}
+
+.kartya_fizet_gomb:hover{
+    color: black;
+    background-color: rgb(59, 227, 13);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#szallitasi_mod2{
+    border: none;
+    width: 20vw;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#szallitasi_mod2:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(59, 227, 13);
+}
+
+.kartya_fizet_gomb{
+    height: 30px;
+    width: 20vw;
+    border-radius: 15px;
+    border: none;
+    margin: auto;
+}
+
+.kartya_fizet_gomb:hover{
+    color: black;
+    background-color: rgb(59, 227, 13);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#sikeres{
+    background-color: black;
+}
+
+#kontent11{
+    height: 300px;
+    width: 350px;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    color: black;
+    display: grid;
+}
+
+#rolunk{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

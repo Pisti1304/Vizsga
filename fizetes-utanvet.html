@@ -5,33 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utánvétes Fizetés</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("cash-form").addEventListener("submit", function(e) {
-                e.preventDefault();
-                window.location.href = "index.html";
-            });
-        });
-    </script> -->
 </head>
-<body>
-<div class="container">
+<body id="fizetes_utanvet">
+<div id="kontent10">
     <h2>Utánvétes Fizetés</h2>
-    <form id="cash-form">
-        <div class="form-group shipping-container">
-            <label for="shipping">Szállítási mód:</label>
-            <select id="shipping">
-                <option value="standard">Normál szállítás (3-5 nap)</option>
-                <option value="express">Expressz szállítás (1-2 nap)</option>
-            </select>
-        </div>
+    <form id="fizetesi_form2">
 
-        <div class="form-group address-container">
-            <label for="address">Szállítási cím:</label>
-            <input type="text" id="address" placeholder="Add meg a címed" required>
-        </div>
+        <label for="cim">Szállítási cím</label>
+        <input type="text" id="cim" placeholder="Add meg a címed" required>
 
-        <button type="submit">Megrendelés leadása</button>
+        <label for="szallitasi_mod2">Szállítási mód</label>
+        <select id="szallitasi_mod2">
+            <option value="sima">Normál szállítás (3-5 nap)</option>
+            <option value="express">Expressz szállítás (1-2 nap)</option>
+        </select>
+
+        <button type="submit" class="kartya_fizet_gomb">Megrendelés leadása</button>
     </form>
 </div>
 </body>
