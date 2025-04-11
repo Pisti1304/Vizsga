@@ -76,37 +76,31 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 1,
             nev: 'Csokis fehérje',
             image: 'fenykepek/localgymcsokisfeherje.png',
-            ar: 10000
+            ar: 6500
         },
         {
             id: 2,
             nev: 'Kreatin',
             image: 'fenykepek/localgymkreatin.png',
-            ar: 10000
+            ar: 6500
         },
         {
             id: 3,
             nev: 'Aminosav',
             image: 'fenykepek/localgymepresfeherje.png',
-            ar: 10000
+            ar: 6500
         },
         {
             id: 4,
-            nev: 'Fehérje',
-            image: 'fenykepek/localgymcsokisfeherje.png',
-            ar: 10000
+            nev: 'Fehércsokis Fehérje',
+            image: 'fenykepek/localgymfehercsokisfeherje.png',
+            ar: 6500
         },
         {
             id: 5,
-            nev: 'Fehérje',
-            image: 'fenykepek/localgymcsokisfeherje.png',
-            ar: 10000
-        },
-        {
-            id: 6,
-            nev: 'Fehérje',
-            image: 'fenykepek/localgymcsokisfeherje.png',
-            ar: 10000
+            nev: 'Epres Fehérje',
+            image: 'fenykepek/localgymepresfeherje.png',
+            ar: 6500
         },
     ];
 

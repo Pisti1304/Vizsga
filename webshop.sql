@@ -34,6 +34,28 @@ CREATE TABLE `webshop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
+-- A tábla adatainak kiíratása `webshop`
+--
+
+INSERT INTO `webshop` (`id`, `termek`, `suly`) VALUES
+(1, 'csokisfeherje', '500'),
+(2, 'csokisfeherje', '1000'),
+(3, 'csokisfeherje', '2000'),
+(4, 'epresfeherje', '500'),
+(5, 'epresfeherje', '1000'),
+(6, 'epresfeherje', '2000'),
+(7, 'fehercsokisfeherje', '500'),
+(8, 'fehercsokisfeherje', '1000'),
+(9, 'fehercsokisfeherje', '2000'),
+(10, 'kreatin', '500'),
+(11, 'kreatin', '1000'),
+(12, 'kreatin', '2000'),
+(13, 'aminosav', '500'),
+(14, 'aminosav', '1000'),
+(15, 'aminosav', '2000'),
+
+
+--
 -- Indexek a kiírt táblákhoz
 --
 
