@@ -298,8 +298,6 @@ a {
 
 /*NAVBAR - STÍLUSOK*/
 
-
-
 .navbar {
     display: flex;
     position: relative;
@@ -348,12 +346,14 @@ a {
     transition: transform 0.5s ease;
 }
 
-#legordulo_menu {
+.legordulo-menu {
     position: absolute;
     right: 32px;
     top: 60px;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 300px;  
+    background: rgba(255, 255, 255, 0.1); 
+    animation: animacio1 1s forwards;
+    
 }
 
 /*FŐOLDAL - első lapja*/
@@ -561,8 +561,8 @@ footer {
     }
 
     .legordulo-menu {
-        opacity: 0;
         position: absolute;
+        opacity: 0;
         height: 250px;
         right: 32px;
         top: 75px;
@@ -660,7 +660,6 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        gap: 20px;
         max-width: 800px;
         margin: 0 auto;
     }
@@ -673,7 +672,7 @@ footer {
         height: 100vh;
         width: 70vw;
     }
-
+    
     #webshop {
         font-size: 15px;
     }
@@ -681,7 +680,7 @@ footer {
     #kontent8{
         height: 250px;
     }
-
+    
     #kontent8 .option{
         font-size: 20px;
     }
@@ -689,17 +688,26 @@ footer {
     #fizetes_kartya , #fizetes_utanvet, #sikeres {
         font-size: 16px;
     }
-
+    
     #szallitasi_mod , #szallitasi_mod2 {
         width: 150px;
     }
-
+    
     .kartya_fizet_gomb{
         width: 150px;
     }
-
+    
     #rolunk_main{
         display: grid;
+    }
+    
+    #kontent12{
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
     }
 }
 
@@ -792,7 +800,6 @@ footer {
 
 .kosar_lista {
     width: 65%;
-    display: grid;
     margin: auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -1092,4 +1099,57 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+
+#kontent12{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.rolunk{
+    height: 470px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgb(59, 227, 13);
+}
+
+.kepeink{
+    height: 400px;
+    width: 350px;
+}
+
+#hazirend{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hazirend{
+    margin: 20px auto;
+    height: 90vh;
+    width: 80vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(59, 227, 13);
+    padding: 10px;
+}
+
+.hazirend li{
+    list-style: none;
+    margin-top: 20px;
+    text-align: justify;
 }

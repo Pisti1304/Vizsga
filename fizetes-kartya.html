@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kártyás Fizetés</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body id="fizetes_kartya">
     <div id="kontent9">
         <h2>Kártyás Fizetés</h2>
         <form id="fizetesi_form">
                 <label for="kartya_szam">Kártyaszám</label>
                 <input type="text" id="kartya_szam" maxlength="16" placeholder="1234 5678 9012 3456" required>
-
                 <label for="cvv">Lejárat</label>
                 <input type="month" id="lejarat" required>
-
-                <label for="szallitasi_mod"></label>
-                
+                <label for="szallitasi_mod"></label>             
                 <label for="cím">Szállítási cím</label>
                 <input type="text" id="szallitasi_cim" placeholder="Add meg a címed" required>
-                
                 <select id="szallitasi_mod">Szállítási mód
                     <option value="sima">Normál szállítás (3-5 nap)</option>
                     <option value="express">Express szállítás (1-2 nap)</option>
                 </select>
-
             <button type="submit"><a href="sikeres.html">Fizetés</button></a>
     </form>
 </div>
 <script src="script.js" defer></script>
 </body>
-
 </html>
