@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }           
         });
     });
-    document.getElementById("payment-form").addEventListener("submit", function(e) {
+    document.getElementById("fizetesi-form").addEventListener("submit", function(e) {
         e.preventDefault();
         window.location.href = "sikeres.html";
     });
