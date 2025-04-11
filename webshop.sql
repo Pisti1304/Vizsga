@@ -52,7 +52,7 @@ INSERT INTO `webshop` (`id`, `termek`, `suly`) VALUES
 (12, 'kreatin', '2000'),
 (13, 'aminosav', '500'),
 (14, 'aminosav', '1000'),
-(15, 'aminosav', '2000'),
+(15, 'aminosav', '2000')
 
 
 --
