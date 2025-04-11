@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Sikeres regisztráció!");
             };
         });
-    }
+    };
 
     const menugomb = document.querySelector('.menu-gomb');
     const menubezar = document.querySelector('.zar-reszmenu');
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 location.reload();
             };
         };
-    }
+    };
 
     var megnyit_kosar = document.querySelector('.kosardiv');
     var bezar_kosar = document.querySelector('.tartalom_bezar');
@@ -121,17 +121,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="ar">${value.ar.toLocaleString()} -,</div>
                 <button onclick="kosarba(${key})">Kosárba</button>`;
             kosar_lista.appendChild(ujdiv); 
-        })
-    }
+        });
+    };
     initApp()
 
     window.kosarba = function(key){
         if(kosar[key] == null){
             kosar[key] = JSON.parse(JSON.stringify(termekek[key]));
             kosar[key].mennyiseg = 1;
-        }
+        };
         kosarfeltolt();
-    }
+    };
 
     function kosarfeltolt(){
         kosar_tartalma2.innerHTML = '';
@@ -153,11 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button onclick="valtoztat_mennyiseg_plusz(${key}, ${value.mennyiseg + 1})">+</button>
                     </div>`;
                     kosar_tartalma2.appendChild(ujdiv);
-                }
-            })
+                };
+            });
         vegosszeg.innerText = vegosszeg_.toLocaleString();
         mennyiseg.innerText = count;
-    }
+    };
     
     window.valtoztat_mennyiseg_plusz = function(key, mennyiseg){
         if(mennyiseg == 0){
@@ -166,9 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }else{
             kosar[key].mennyiseg = mennyiseg;
             kosar[key].ar =  termekek[key].ar + kosar[key].ar;
-        }
+        };
         kosarfeltolt();
-    }
+    };
 
     window.valtoztat_mennyiseg_minusz = function(key, mennyiseg){
         if(mennyiseg == 0){
@@ -177,14 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }else{
             kosar[key].mennyiseg = mennyiseg;
             kosar[key].ar -=  termekek[key].ar ;
-        }
+        };
         kosarfeltolt();
-    }
+    };
 
     window.kosar_urit = function() {
         kosar = [];  
         kosarfeltolt();    
-    }
+    };
 
     const selectedElements = document.querySelectorAll('.mertekegyseg');
     selectedElements.forEach(select => {
@@ -204,24 +204,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }           
         });
     });
-    document.getElementById("fizetesi-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-        window.location.href = "sikeres.html";
-    });
-    document.getElementById("cash-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-        window.location.href = "sikeres.html";
-    });
     const fizetesValaszto = document.getElementById("fizetesi-valaszto");
-     const vegosszegBox = document.querySelector(".vegosszeg");
- 
+    const vegosszegBox = document.querySelector(".vegosszeg");
      if (vegosszegBox && fizetesValaszto) {
          vegosszegBox.addEventListener("click", () => {
              if (kosar.length > 0) {
                  fizetesValaszto.style.display = "block";
              } else {
                  alert("A kosarad üres, előbb adj hozzá termékeket!");
-             }
+             };
          });
-     }
+     };
+     
  });
