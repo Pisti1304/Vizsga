@@ -60,6 +60,14 @@ a {
     animation: animacio1 2s forwards;
 }
 
+@keyframes hatter {
+    50% {box-shadow: -5px -5px 20px -5px rgb(59, 227, 13), 5px 5px 20px 5px rgb(59, 227, 13);}
+  }
+
+@keyframes hatter2 {
+    50% {box-shadow: -5px -5px 20px -5px black, 5px 5px 20px 5px black;}
+}
+
 @keyframes animacio1 {
     0% {
         opacity: 0;
@@ -352,6 +360,7 @@ a {
     top: 60px;
     width: 300px;  
     background: rgba(255, 255, 255, 0.1); 
+    border: 2px solid rgb(59, 227, 13);
     animation: animacio1 1s forwards;
     
 }
@@ -425,7 +434,7 @@ a {
     text-align: center;
     border: 2px solid black;
     border-radius: 40px;
-    box-shadow: 20px 20px 20px black;
+    animation: hatter2 5s infinite;
 }
 
 #kontent2 ul {
@@ -501,7 +510,7 @@ footer {
     position: absolute;
     display: flex;
     bottom: 10px;
-    left: 10%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -917,7 +926,7 @@ footer {
     text-align: center;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    animation: hatter 5s infinite;
     color: black;
 }
 
@@ -947,7 +956,7 @@ footer {
     text-align: center;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    animation: hatter 5s infinite;
     color: black;
 }
 
@@ -1008,7 +1017,7 @@ footer {
     text-align: center;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    animation: hatter 5s infinite;
     color: black;
 }
 
@@ -1084,7 +1093,7 @@ footer {
     text-align: center;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0 50px 50px rgb(59, 227, 13);
+    animation: hatter 5s infinite;  
     color: black;
     display: grid;
 }
@@ -1117,7 +1126,7 @@ footer {
     padding: 20px;
     border-radius: 20px;
     background-color: white;
-    box-shadow: 5px 5px 5px 5px rgb(59, 227, 13);
+    animation: hatter 5s infinite;
 }
 
 .kepeink{
@@ -1141,11 +1150,13 @@ footer {
     margin: 20px auto;
     height: 90vh;
     width: 80vw;
-    color: white;
+    padding: 10px;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(59, 227, 13);
-    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    animation: hatter 5s infinite;
 }
 
 .hazirend li{
