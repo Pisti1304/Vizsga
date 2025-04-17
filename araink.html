@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Gym - Regisztráció</title>
+    <title>Local Gym - Árak</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="index">
+
+<body id="arak">
     <header>
         <nav class="navbar">
-            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank"><p class="logofelirat">LocalGym</p></a>
+            <a class="logofelirat" href="https://www.instagram.com/localgym" target="_blank">
+                <p class="logofelirat">LocalGym</p>
+            </a>
             <ul>
                 <a href="index.html"><li class="animacio">Főoldal</li></a>
                 <a href="rolunk.html"><li class="animacio">Rólunk</li></a>
                 <a href="webshop.html"><li class="animacio">Webshop</li></a>
-                <a href="araink.html"><li class="animacio">Áraink</li></a>
                 <a href="hazirend.html"><li class="animacio">Házirend</li></a>
                 <a href="regisztracio.html"><li class="animacio">Regisztráció</li></a>
             </ul>
@@ -29,19 +32,38 @@
             <a href="regisztracio.html"><li>Regisztráció</li></a>
         </div>
     </header>
-    <main>
-        <div id="bejelentkezes">
-            <form action="bejelentkezik.php" method="post" id="form2" >
-                <h2>Bejelentkezés</h2>
-                <label for="email"></label>
-                <input type="text" id="email2" class="input" placeholder="Email" autocomplete="off" name="email" required>
-                <label for="password"></label>
-                <input type="text" id="jelszo2" class="input" placeholder="Jelszó" autocomplete="off" name="jelszo" required>
-                <button id="gomb" type="submit">Bejelentkezés</button>
-                <p>Nincs még fiókod? <a href="regisztracio.html" class="beje-reg">Regisztrálj!</a></p>
-            </form>
+
+    <div id="araink_div">
+        <div class="araink_belso_div">
+            <h3>Havi felnőtt bérlet</h3>
+            <p>18.000 FT</p>
         </div>
-    </main>
+        <div class="araink_belso_div">
+            <h3>Havi diák/nyugdíjas bérlet</h3>
+            <p>16.000 FT</p>
+        </div>
+        <div class="araink_belso_div">
+            <h3>Napijegy</h3>
+            <p>2.000 FT</p>
+        </div>
+        <div class="araink_belso_div">
+            <h3>3 havi felnőtt bérlet</h3>
+            <p>46.000 FT</p>
+        </div>
+        <div class="araink_belso_div">
+            <h3>3 havi diák/nyugdíjas bérlet</h3>
+            <p>40.000 FT</p>
+        </div>
+        <div class="araink_belso_div">
+            <h3>Éves felnőtt bérlet</h3>
+            <p>190.000 FT</p>
+        </div>
+        <div class="araink_belso_div">
+            <h3>Éves diák/nyugdíjas bérlet</h3>
+            <p>160.000 FT</p>
+        </div>
+    </div>
     <script src="script.js" defer></script>
 </body>
+
 </html>
